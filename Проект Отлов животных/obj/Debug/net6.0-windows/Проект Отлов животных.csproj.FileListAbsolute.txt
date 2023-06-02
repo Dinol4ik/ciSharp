@@ -1,0 +1,40 @@
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\Проект Отлов животных.exe
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\Проект Отлов животных.deps.json
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\Проект Отлов животных.runtimeconfig.json
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\Проект Отлов животных.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\Проект Отлов животных.pdb
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект Отлов животных.csproj.AssemblyReference.cache
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект Отлов животных.csproj.GenerateResource.cache
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект Отлов животных.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект Отлов животных.AssemblyInfoInputs.cache
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект Отлов животных.AssemblyInfo.cs
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект Отлов животных.csproj.CoreCompileInputs.cache
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект Отлов животных.csproj.CopyComplete
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект Отлов животных.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\refint\Проект Отлов животных.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект Отлов животных.pdb
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект Отлов животных.genruntimeconfig.cache
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\ref\Проект Отлов животных.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\Npgsql.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\Humanizer.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\Mono.TextTemplating.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\System.Text.Json.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.LoginForm.resources
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.mainForm.resources
