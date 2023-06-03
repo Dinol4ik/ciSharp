@@ -11,7 +11,7 @@ using Проект_Отлов_животных;
 namespace Проект_Отлов_животных.Migrations
 {
     [DbContext(typeof(DB))]
-    [Migration("20230602171426_Initial")]
+    [Migration("20230603180832_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -32,10 +32,19 @@ namespace Проект_Отлов_животных.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Company")
+                        .HasColumnType("text");
+
                     b.Property<string>("Login")
                         .HasColumnType("text");
 
+                    b.Property<string>("OMS")
+                        .HasColumnType("text");
+
                     b.Property<string>("Password")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Role")
                         .HasColumnType("text");
 
                     b.HasKey("Id");

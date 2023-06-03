@@ -15,9 +15,9 @@ namespace Проект_Отлов_животных
         {
             AuthHandler authHandler = new AuthHandler();
            var auth =  authHandler.autharization(textLogin.Text,textPassword.Text);
-            if (auth)
+            if (auth.Count>0)
             {
-                mainForm mainForm = new mainForm();
+                mainForm mainForm = new mainForm(auth);
                 Visible = false;
                 mainForm.ShowDialog(this);
                 Visible = true;

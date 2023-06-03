@@ -9,16 +9,18 @@ namespace Проект_Отлов_животных
 {
     internal class AuthHandler
     {
-         public bool autharization(string login, string password)
+       public List<Models.User> autharization(string login, string password)
         {
             using (DB db = new DB())
             {
                 var users =  db.Users
                                     .Where(p => p.Login == login && p.Password == password)
-                                    .ToList();     // асинхронное получение данных
-                return (users != null && users.Count > 0);
-               
+                                    .ToList();
+                return (users);
+
             }
         }
+
+
     }
 }

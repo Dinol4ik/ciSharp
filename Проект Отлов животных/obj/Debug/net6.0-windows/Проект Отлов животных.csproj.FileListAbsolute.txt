@@ -38,3 +38,5 @@ C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животн�
 C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.LoginForm.resources
 C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.mainForm.resources
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.AccountForm.resources
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.RegisterApplicationForm.resources
