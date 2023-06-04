@@ -4,13 +4,46 @@
     <Compile Update="AccountForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="AddActForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Contract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="EditAct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="EditApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="EditContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="EditOrganisation.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="SearchAct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SearchApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Organisation.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="RegisterApplicationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SearchContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SearchOrganisation.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
