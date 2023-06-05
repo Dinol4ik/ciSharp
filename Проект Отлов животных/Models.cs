@@ -38,7 +38,7 @@ namespace Проект_Отлов_животных
             public string? Description { get; set; }
             public bool? UrgencyOfExecution { get; set; }
             public int LocalityId { get; set; }
-            public Locality? Locality { get; set; }  // Место нахождения
+            public Locality? Locality { get; set;}  // Место нахождения
 
         }
 

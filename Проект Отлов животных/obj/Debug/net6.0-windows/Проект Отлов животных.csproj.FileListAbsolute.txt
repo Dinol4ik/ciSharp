@@ -125,3 +125,14 @@ C:\Users\User\source\repos\ciSharp\Проект Отлов животных\obj\
 C:\Users\User\source\repos\ciSharp\Проект Отлов животных\obj\Debug\net6.0-windows\Проект Отлов животных.pdb
 C:\Users\User\source\repos\ciSharp\Проект Отлов животных\obj\Debug\net6.0-windows\Проект Отлов животных.genruntimeconfig.cache
 C:\Users\User\source\repos\ciSharp\Проект Отлов животных\obj\Debug\net6.0-windows\ref\Проект Отлов животных.dll
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.AddActForm.resources
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.Contract.resources
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.EditAct.resources
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.EditApplication.resources
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.EditContract.resources
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.EditOrganisation.resources
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.Organisation.resources
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.SearchAct.resources
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.SearchApplication.resources
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.SearchContract.resources
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.SearchOrganisation.resources

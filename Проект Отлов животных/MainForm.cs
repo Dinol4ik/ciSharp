@@ -14,7 +14,7 @@ namespace Проект_Отлов_животных
     {
         public mainForm(List<Models.User> data)
         {
-            InitializeComponent();        
+            InitializeComponent();
             accountName.Text = data[0].Login;
             this.data = data;
             StartPosition = FormStartPosition.CenterParent;
@@ -41,11 +41,6 @@ namespace Проект_Отлов_животных
 
         }
 
-        private void AccountBtn_Click(object sender, EventArgs e)
-        {
-            AccountForm frm = new AccountForm(data);
-            frm.ShowDialog();
-        }
 
         private void OrgAddBtn_Click(object sender, EventArgs e)
         {
@@ -67,13 +62,15 @@ namespace Проект_Отлов_животных
 
         private void SearchApplicationBut_Click(object sender, EventArgs e)
         {
-            SearchApplication application = new SearchApplication();
+            AplicationHandler aplication = new AplicationHandler();
+           var aplicationList = aplication.GetApplicationList();
+            SearchApplication application = new SearchApplication(aplicationList);
             application.ShowDialog();
         }
 
         private void ActBtn_Click(object sender, EventArgs e)
         {
-            AddActForm act = new AddActForm(); 
+            AddActForm act = new AddActForm();
             act.ShowDialog();
         }
 
@@ -86,6 +83,12 @@ namespace Проект_Отлов_животных
         private void AddContractBut_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AccountBtn_Click_1(object sender, EventArgs e)
+        {
+            AccountForm frm = new AccountForm(data);
+            frm.ShowDialog();
         }
     }
 }
