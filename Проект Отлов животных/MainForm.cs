@@ -56,14 +56,16 @@ namespace Проект_Отлов_животных
 
         private void AplicationRegBtn_Click(object sender, EventArgs e)
         {
-            RegisterApplicationForm frap = new RegisterApplicationForm();
+            AplicationHandler allLocality = new AplicationHandler();
+            var locality = allLocality.localities();
+            RegisterApplicationForm frap = new RegisterApplicationForm(locality);
             frap.ShowDialog();
         }
 
         private void SearchApplicationBut_Click(object sender, EventArgs e)
         {
             AplicationHandler aplication = new AplicationHandler();
-           var aplicationList = aplication.GetApplicationList();
+            var aplicationList = aplication.GetApplicationList();
             SearchApplication application = new SearchApplication(aplicationList);
             application.ShowDialog();
         }
@@ -89,6 +91,11 @@ namespace Проект_Отлов_животных
         {
             AccountForm frm = new AccountForm(data);
             frm.ShowDialog();
+        }
+
+        private void mainForm_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

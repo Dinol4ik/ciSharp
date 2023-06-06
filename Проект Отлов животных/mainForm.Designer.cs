@@ -199,6 +199,7 @@
             Controls.Add(accountName);
             Name = "mainForm";
             Text = "MainForm";
+            Load += mainForm_Load_1;
             ResumeLayout(false);
             PerformLayout();
         }

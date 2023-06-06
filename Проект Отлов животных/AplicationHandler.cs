@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +31,18 @@ namespace Проект_Отлов_животных
                     db.SaveChanges();
                 }
             }
+        }
+        public List<Models.Locality> localities()
+        {
+            using (DB db = new DB())
+            {
+                var locality = db.Locality.ToList();
+                return locality;
+            }
+        }
+        public void SaveAplication(int number, List<object> data)
+        {
+            //Models.Applications aplication = new Models.Applications({ })            
         }
     }
 }

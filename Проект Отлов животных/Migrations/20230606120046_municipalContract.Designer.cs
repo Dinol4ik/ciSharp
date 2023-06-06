@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Проект_Отлов_животных;
@@ -11,9 +12,11 @@ using Проект_Отлов_животных;
 namespace Проект_Отлов_животных.Migrations
 {
     [DbContext(typeof(DB))]
-    partial class DBModelSnapshot : ModelSnapshot
+    [Migration("20230606120046_municipalContract")]
+    partial class municipalContract
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,52 +24,6 @@ namespace Проект_Отлов_животных.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
-
-            modelBuilder.Entity("Проект_Отлов_животных.Models+Act_Of_Capture", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<long?>("Act_Number")
-                        .HasColumnType("bigint");
-
-                    b.Property<string>("Amount_Of_Animals")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Amount_Of_Cats")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Amount_Of_Dogs")
-                        .HasColumnType("text");
-
-                    b.Property<int>("ApplicationId")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("Date_Of_Capture")
-                        .HasColumnType("text");
-
-                    b.Property<int>("Municipal_ContractId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("OrganizationId")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("Target")
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ApplicationId");
-
-                    b.HasIndex("Municipal_ContractId");
-
-                    b.HasIndex("OrganizationId");
-
-                    b.ToTable("act_Of_Captures");
-                });
 
             modelBuilder.Entity("Проект_Отлов_животных.Models+Applications", b =>
                 {
@@ -99,56 +56,6 @@ namespace Проект_Отлов_животных.Migrations
                     b.HasIndex("LocalityId");
 
                     b.ToTable("Applications");
-                });
-
-            modelBuilder.Entity("Проект_Отлов_животных.Models+Card_Animal", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("ApplicationId")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("Breed")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Chip_number")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Color")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Ears")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Gender")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Indentification_label")
-                        .HasColumnType("text");
-
-                    b.Property<long?>("Kategory")
-                        .HasColumnType("bigint");
-
-                    b.Property<int>("LocalityId")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("Special_signs")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Tail")
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ApplicationId");
-
-                    b.HasIndex("LocalityId");
-
-                    b.ToTable("Card_Animal");
                 });
 
             modelBuilder.Entity("Проект_Отлов_животных.Models+Locality", b =>
@@ -289,33 +196,6 @@ namespace Проект_Отлов_животных.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Проект_Отлов_животных.Models+Act_Of_Capture", b =>
-                {
-                    b.HasOne("Проект_Отлов_животных.Models+Applications", "Application")
-                        .WithMany("act_Of_Captures")
-                        .HasForeignKey("ApplicationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Проект_Отлов_животных.Models+Municipal_contract", "Municipal_Contract")
-                        .WithMany("act_Of_Captures")
-                        .HasForeignKey("Municipal_ContractId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Проект_Отлов_животных.Models+Organization", "Organization")
-                        .WithMany("act_Of_Captures")
-                        .HasForeignKey("OrganizationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Application");
-
-                    b.Navigation("Municipal_Contract");
-
-                    b.Navigation("Organization");
-                });
-
             modelBuilder.Entity("Проект_Отлов_животных.Models+Applications", b =>
                 {
                     b.HasOne("Проект_Отлов_животных.Models+Locality", "Locality")
@@ -323,25 +203,6 @@ namespace Проект_Отлов_животных.Migrations
                         .HasForeignKey("LocalityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Locality");
-                });
-
-            modelBuilder.Entity("Проект_Отлов_животных.Models+Card_Animal", b =>
-                {
-                    b.HasOne("Проект_Отлов_животных.Models+Applications", "Application")
-                        .WithMany("card_Animals")
-                        .HasForeignKey("ApplicationId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Проект_Отлов_животных.Models+Locality", "Locality")
-                        .WithMany("card_Animals")
-                        .HasForeignKey("LocalityId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Application");
 
                     b.Navigation("Locality");
                 });
@@ -387,32 +248,16 @@ namespace Проект_Отлов_животных.Migrations
                         .HasForeignKey("Type_Of_OrganizationId");
                 });
 
-            modelBuilder.Entity("Проект_Отлов_животных.Models+Applications", b =>
-                {
-                    b.Navigation("act_Of_Captures");
-
-                    b.Navigation("card_Animals");
-                });
-
             modelBuilder.Entity("Проект_Отлов_животных.Models+Locality", b =>
                 {
                     b.Navigation("Applications");
 
-                    b.Navigation("card_Animals");
-
                     b.Navigation("type_Of_Organizations");
-                });
-
-            modelBuilder.Entity("Проект_Отлов_животных.Models+Municipal_contract", b =>
-                {
-                    b.Navigation("act_Of_Captures");
                 });
 
             modelBuilder.Entity("Проект_Отлов_животных.Models+Organization", b =>
                 {
                     b.Navigation("Municipal_contracts");
-
-                    b.Navigation("act_Of_Captures");
                 });
 
             modelBuilder.Entity("Проект_Отлов_животных.Models+Type_Of_Organization", b =>
