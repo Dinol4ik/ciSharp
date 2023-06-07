@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Проект_Отлов_животных
 {
-    public class Organization
+    public class OrganizationC
     {
         public int Id { get; set; }
         public string? Title { get; set; }
@@ -17,7 +17,7 @@ namespace Проект_Отлов_животных
         public string? IpOrOoo { get; set; }
         public string? Locality { get; set; }
 
-        public Organization(int id, string title, string? type, string inn, string? kpp, string? adress, string? iporooo, string? locality)
+        public OrganizationC(int id, string title, string? type, string inn, string? kpp, string? adress, string? iporooo, string? locality)
         {
             Id = id;
             Title = title;

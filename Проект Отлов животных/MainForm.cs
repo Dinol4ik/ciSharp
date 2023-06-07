@@ -124,7 +124,10 @@ namespace Проект_Отлов_животных
 
         private void SearchContractBut_Click(object sender, EventArgs e)
         {
-            SearchContract Form = new SearchContract();
+            MunicipalHandler contract = new MunicipalHandler();
+            var org = contract.OrganizationsName();
+            var contracts = contract.GetContractsList();
+            SearchContract Form = new SearchContract(contracts, org);
             Form.ShowDialog();
         }
     }

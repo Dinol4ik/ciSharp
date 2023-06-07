@@ -60,8 +60,7 @@ namespace Проект_Отлов_животных
                 Municipal_ContractId = contractId.Id
             };           
             //if (data.Find(x => x.Id == id) != null) { data.Remove(data.Find(x => x.Id == id)); }
-            RegisterAct aplicationHandler = new RegisterAct();
-            aplicationHandler.EditAct(applications);
+            
 
             dataGridView1.DataSource = data.GetRange(0, data.Count);
             dataGridView1.Refresh();

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Проект_Отлов_животных
 {
-    public class Municipal_Contract
+    public class Municipal_ContractC
     {
         public int Id { get; set; }
         public long? Number_contract { get; set; }
         public string? Date_of_action { get; set; }
         public string? Date_of_conclusion { get; set; }
         public string? Organization_title { get; set; }
-        public Municipal_Contract(int id,long number_contract, string date_of_conlusion, string date_of_action, string? organization_title) {
+        public Municipal_ContractC(int id,long? number_contract, string? date_of_conlusion, string? date_of_action, string? organization_title) {
             Id = id;
             Number_contract = number_contract;
             Date_of_action = date_of_action;
