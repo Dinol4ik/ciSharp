@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Проект_Отлов_животных.Migrations;
 
 namespace Проект_Отлов_животных
 {
@@ -15,7 +16,7 @@ namespace Проект_Отлов_животных
             using (DB db = new DB())
             {
                 var aplicat =  db.Applications
-                                     .Select(p => new Application(p.UrgencyOfExecution,p.Date,p.Kategory,p.Id,p.AnimalHabitat,p.Description, p.Locality.Adress) )
+                                     .Select(p => new Application(p.number,p.UrgencyOfExecution,p.Date,p.Kategory,p.Id,p.AnimalHabitat,p.Description, p.Locality.Adress) )
                                     .ToList();
                 return aplicat;
 
@@ -40,9 +41,36 @@ namespace Проект_Отлов_животных
                 return locality;
             }
         }
-        public void SaveAplication(int number, List<object> data)
+        //int number, string date, string animalH, string desc, string Kategort, int locality,bool urg
+        public void SaveAplication(Models.Applications aplicate )
         {
-            //Models.Applications aplication = new Models.Applications({ })            
+            using (DB dB = new DB())
+            {
+                //Models.Applications application  = new Models.Applications { Date=date, AnimalHabitat=animalH, Description =desc, Kategory = Kategort, LocalityId = locality, UrgencyOfExecution = urg};
+                dB.Applications.Add(aplicate);
+                dB.SaveChanges();
+            }          
         }
+        public void EditAplication(Models.Applications aplicate)
+        {
+            using (DB dB = new DB())
+            {
+                //Models.Applications application  = new Models.Applications { Date=date, AnimalHabitat=animalH, Description =desc, Kategory = Kategort, LocalityId = locality, UrgencyOfExecution = urg};
+                Models.Applications? aplication = dB.Applications.FirstOrDefault(p => p.Id == aplicate.Id);
+                if (aplication != null)
+                {
+                    aplication.number = aplicate.number;
+                    aplication.Date = aplicate.Date;
+                    aplication.Description = aplicate.Description;
+                    aplication.AnimalHabitat = aplicate.AnimalHabitat;
+                    aplication.LocalityId = aplicate.LocalityId;
+                    aplication.Kategory =   aplicate.Kategory;
+                    aplication.UrgencyOfExecution = aplicate.UrgencyOfExecution;
+                }
+
+                dB.SaveChanges();
+            }
+        }
+
     }
 }

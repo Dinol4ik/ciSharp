@@ -12,14 +12,15 @@ namespace Проект_Отлов_животных
 {
     public partial class mainForm : Form
     {
-        public mainForm(List<Models.User> data)
+        //List<Models.User> data
+        public mainForm()
         {
             InitializeComponent();
-            accountName.Text = data[0].Login;
-            this.data = data;
+            //accountName.Text = data[0].Login;
+            //this.data = data;
             StartPosition = FormStartPosition.CenterParent;
         }
-        List<Models.User> data;
+        //List<Models.User> data;
 
         private void mainForm_Load(object sender, EventArgs e)
         {
@@ -66,7 +67,9 @@ namespace Проект_Отлов_животных
         {
             AplicationHandler aplication = new AplicationHandler();
             var aplicationList = aplication.GetApplicationList();
-            SearchApplication application = new SearchApplication(aplicationList);
+            AplicationHandler allLocality = new AplicationHandler();
+            var locality = allLocality.localities();
+            SearchApplication application = new SearchApplication(aplicationList, locality);
             application.ShowDialog();
         }
 
@@ -89,8 +92,8 @@ namespace Проект_Отлов_животных
 
         private void AccountBtn_Click_1(object sender, EventArgs e)
         {
-            AccountForm frm = new AccountForm(data);
-            frm.ShowDialog();
+            //AccountForm frm = new AccountForm(data);
+            //frm.ShowDialog();
         }
 
         private void mainForm_Load_1(object sender, EventArgs e)

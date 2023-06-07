@@ -16,8 +16,10 @@ namespace Проект_Отлов_животных
         public string? Description { get; set; }
         public bool? UrgencyOfExecution { get; set; }
         public string? LocalityAddress { get; set; }
-        public Application(bool? urgencyOfExecution, string? date, string? kategory, int id, string? animalHabitat, string? description, string? localityAddress)
+        public int? Number {  get; set; }
+        public Application(int? number,bool? urgencyOfExecution, string? date, string? kategory, int id, string? animalHabitat, string? description, string? localityAddress)
         {
+            Number = number;
             UrgencyOfExecution = urgencyOfExecution;
             Date = date;
             Kategory = kategory;

@@ -32,9 +32,9 @@ namespace Проект_Отлов_животных
 
         public class Applications
         {
-
             public int Id { get; set; }
             public string? Date { get; set; }
+            public int? number { get; set; }
             public string? Kategory { get; set; }
             public string? AnimalHabitat { get; set; }
             public string? Description { get; set; }

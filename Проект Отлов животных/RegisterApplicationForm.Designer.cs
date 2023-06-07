@@ -39,18 +39,22 @@
             label4 = new Label();
             dateTimePicker1 = new DateTimePicker();
             checkBox1 = new CheckBox();
-            listBox2 = new ListBox();
             button1 = new Button();
+            textBox1 = new TextBox();
+            label5 = new Label();
+            textBox2 = new TextBox();
+            label6 = new Label();
+            localityAdress = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)applicationBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)initialBindingSource).BeginInit();
             SuspendLayout();
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(215, 140);
+            textBox3.Location = new Point(215, 164);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(336, 223);
+            textBox3.Size = new Size(336, 141);
             textBox3.TabIndex = 2;
             textBox3.TextChanged += textBox3_TextChanged;
             // 
@@ -123,23 +127,13 @@
             // 
             checkBox1.AutoSize = true;
             checkBox1.CheckAlign = ContentAlignment.MiddleRight;
-            checkBox1.Location = new Point(111, 491);
+            checkBox1.Location = new Point(482, 384);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(69, 19);
             checkBox1.TabIndex = 12;
             checkBox1.Text = "Срочно";
             checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // listBox2
-            // 
-            listBox2.ForeColor = Color.FromArgb(0, 0, 64);
-            listBox2.FormattingEnabled = true;
-            listBox2.ItemHeight = 15;
-            listBox2.Location = new Point(215, 369);
-            listBox2.Name = "listBox2";
-            listBox2.Size = new Size(172, 94);
-            listBox2.TabIndex = 13;
-            listBox2.SelectedIndexChanged += listBox2_SelectedIndexChanged;
+            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // button1
             // 
@@ -151,13 +145,61 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(215, 321);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(336, 24);
+            textBox1.TabIndex = 15;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(81, 324);
+            label5.Name = "label5";
+            label5.Size = new Size(99, 15);
+            label5.TabIndex = 16;
+            label5.Text = "Место Обитание";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(215, 435);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(161, 24);
+            textBox2.TabIndex = 17;
+            textBox2.TextChanged += textBox2_TextChanged;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(83, 444);
+            label6.Name = "label6";
+            label6.Size = new Size(84, 15);
+            label6.TabIndex = 18;
+            label6.Text = "Номер заявки";
+            // 
+            // localityAdress
+            // 
+            localityAdress.FormattingEnabled = true;
+            localityAdress.Location = new Point(215, 384);
+            localityAdress.Name = "localityAdress";
+            localityAdress.Size = new Size(121, 23);
+            localityAdress.TabIndex = 19;
+            localityAdress.SelectedIndexChanged += comboBox1_SelectedIndexChanged_1;
+            // 
             // RegisterApplicationForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 657);
+            Controls.Add(localityAdress);
+            Controls.Add(label6);
+            Controls.Add(textBox2);
+            Controls.Add(label5);
+            Controls.Add(textBox1);
             Controls.Add(button1);
-            Controls.Add(listBox2);
             Controls.Add(checkBox1);
             Controls.Add(dateTimePicker1);
             Controls.Add(label4);
@@ -186,7 +228,11 @@
         private DateTimePicker dateTimePicker1;
         private CheckBox checkBox1;
         private BindingSource applicationBindingSource;
-        private ListBox listBox2;
         private Button button1;
+        private TextBox textBox1;
+        private Label label5;
+        private TextBox textBox2;
+        private Label label6;
+        private ComboBox localityAdress;
     }
 }
