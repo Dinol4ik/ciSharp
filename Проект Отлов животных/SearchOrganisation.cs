@@ -38,56 +38,72 @@ namespace Проект_Отлов_животных
             string title = textBox1.Text;
         }
 
-        private void button3_Click(object sender, EventArgs e) //Изменить
-        {
-            int id = int.Parse(label2.Text);
-
-            Models.Locality localityId = (Models.Locality)comboBox1.SelectedItem;
-            Models.Type_Of_Organization typeOrgId = (Models.Type_Of_Organization)comboBox2.SelectedItem;
-            Models.Organization organization = new Models.Organization
-            {
-                Id = int.Parse(label2.Text),
-                Title = textBox2.Text,
-                TypeOfId = typeOrgId.Id,
-                INN = textBox3.Text,
-                KPP = textBox4.Text,
-                Sole_Properietor = textBox5.Text,
-                Registation_addres = textBox6.Text,
-                LocalityId = localityId.Id,
-        };
-            //if (data.Find(x => x.Id == id) != null) { data.Remove(data.Find(x => x.Id == id)); }
-            RegisterOrganization organizationHandler = new RegisterOrganization();
-            organizationHandler.EditOrganization(organization);
-
-            dataGridView1.DataSource = data.GetRange(0, data.Count);
-            dataGridView1.Refresh();
-
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
             label2.Text = dataGridView1[0, dataGridView1.CurrentRow.Index].Value.ToString();
             var title = dataGridView1[1, dataGridView1.CurrentRow.Index].Value.ToString();
             var inn = dataGridView1[3, dataGridView1.CurrentRow.Index].Value.ToString();
             var kpp = dataGridView1[4, dataGridView1.CurrentRow.Index].Value.ToString();
-            var ipOrOoo = dataGridView1[5, dataGridView1.CurrentRow.Index].Value.ToString();
+            var adress = dataGridView1[5, dataGridView1.CurrentRow.Index].Value.ToString();
+            var ipOrOoo = dataGridView1[6, dataGridView1.CurrentRow.Index].Value.ToString();
 
             textBox2.Text = title;
             textBox3.Text = inn;
             textBox4.Text = kpp;
             textBox5.Text = ipOrOoo;
+            textBox6.Text = adress;
         }
 
-        private void button2_Click(object sender, EventArgs e) //Удалить
+        private void button3_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(label2.Text);
+            try
+            {
+                int id = int.Parse(label2.Text);
 
-            if (data.Find(x => x.Id == id) != null) { data.Remove(data.Find(x => x.Id == id)); }
-            RegisterOrganization organizationHandler = new RegisterOrganization();
-            organizationHandler.DeleteOrganization(id);
-            dataGridView1.DataSource = data.GetRange(0, data.Count);
-            dataGridView1.Refresh();
+                Models.Locality localityId = (Models.Locality)comboBox1.SelectedItem;
+                Models.Type_Of_Organization typeOrgId = (Models.Type_Of_Organization)comboBox2.SelectedItem;
+                Models.Organization organization = new Models.Organization
+                {
+                    Id = int.Parse(label2.Text),
+                    Title = textBox2.Text,
+                    TypeOfId = typeOrgId.Id,
+                    INN = textBox3.Text,
+                    KPP = textBox4.Text,
+                    Sole_Properietor = textBox5.Text,
+                    Registation_addres = textBox6.Text,
+                    LocalityId = localityId.Id,
+                };
+                //if (data.Find(x => x.Id == id) != null) { data.Remove(data.Find(x => x.Id == id)); }
+                RegisterOrganization organizationHandler = new RegisterOrganization();
+                organizationHandler.EditOrganization(organization);
+
+                dataGridView1.DataSource = data.GetRange(0, data.Count);
+                dataGridView1.Refresh();
+                MessageBox.Show("Данные обновленны");
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка! Проверьте правильность данных");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = int.Parse(label2.Text);
+
+                if (data.Find(x => x.Id == id) != null) { data.Remove(data.Find(x => x.Id == id)); }
+                RegisterOrganization organizationHandler = new RegisterOrganization();
+                organizationHandler.DeleteOrganization(id);
+                dataGridView1.DataSource = data.GetRange(0, data.Count);
+                dataGridView1.Refresh();
+                MessageBox.Show("Данные удалены");
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка при удалении данных");
+            }
         }
     }
 }

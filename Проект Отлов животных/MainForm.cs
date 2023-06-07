@@ -46,12 +46,6 @@ namespace Проект_Отлов_животных
         }
 
 
-        private void OrgAddBtn_Click(object sender, EventArgs e)
-        {
-            Organisation org = new Organisation();
-            org.ShowDialog();
-        }
-
         private void AplicationRegBtn_Click(object sender, EventArgs e)
         {
             AplicationHandler allLocality = new AplicationHandler();
@@ -133,6 +127,18 @@ namespace Проект_Отлов_животных
 
             SearchAct actForm = new SearchAct(actList, organisation, contract, application);
             actForm.ShowDialog();
+        }
+
+        private void OrgAddBtn_Click(object sender, EventArgs e)
+        {
+            RegisterOrganization orgList = new RegisterOrganization();
+            var organisation_type = orgList.type_organisation();
+
+            AplicationHandler allLocality = new AplicationHandler();
+            var locality = allLocality.localities();
+
+            Organisation org = new Organisation(organisation_type, locality);
+            org.ShowDialog();
         }
     }
 }
