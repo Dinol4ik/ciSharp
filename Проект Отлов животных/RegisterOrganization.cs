@@ -8,88 +8,69 @@ namespace Проект_Отлов_животных
 {
     internal class RegisterOrganization
     {
-        //public List<Organization> GetActList()
-        //{
-        //    using (DB db = new DB())
-        //    {
-        //        var org = db.organizations
-        //                             .Select(p => new Organization(p.Id, p.Type, p.Inn, p.Kpp, p.Adress, p.IpOrOoo, p.Locality.Adress))
-        //                            .ToList();
-        //        return org;
+        public List<OrganizationC> GetOrganizationList()
+        {
+            using (DB db = new DB())
+            {
+                var org = db.organizations
+                                     .Select(p => new OrganizationC(p.Id, p.Title, p.TypeOf.Title, p.INN, p.KPP, p.Registation_addres, p.Sole_Properietor, p.Locality.Adress))
+                                    .ToList();
+                return org;
 
-        //    }
-        //}
+            }
+        }
 
-        //public void DeleteAct(int index)
-        //{
-        //    using (DB db = new DB())
-        //    {
-        //        var act = db.act_Of_Captures.Where(p => p.Id == index).FirstOrDefault();
-        //        if (act != null)
-        //        {
-        //            db.act_Of_Captures.Remove(act);
-        //            db.SaveChanges();
-        //        }
-        //    }
-        //}
+        public List<Models.Type_Of_Organization> type_organisation()
+        {
+            using (DB db = new DB())
+            {
+                var type_organisations = db.type_Of_Organizations.ToList();
+                return type_organisations;
+            }
+        }
 
-        //public List<Models.Organization> organisation()
-        //{
-        //    using (DB db = new DB())
-        //    {
-        //        var organisations = db.organizations.ToList();
-        //        return organisations;
-        //    }
-        //}
+        public void DeleteOrganization(int index)
+        {
+            using (DB db = new DB())
+            {
+                var org = db.organizations.Where(p => p.Id == index).FirstOrDefault();
+                if (org != null)
+                {
+                    db.organizations.Remove(org);
+                    db.SaveChanges();
+                }
+            }
+        }
 
-        //public List<Models.Applications> GetApplication()
-        //{
-        //    using (DB db = new DB())
-        //    {
-        //        var application = db.Applications.ToList();
-        //        return application;
-        //    }
-        //}
+        //int number, string date, string animalH, string desc, string Kategort, int locality,bool urg
+        public void SaveOrganization(Models.Organization org)
+        {
+            using (DB dB = new DB())
+            {
+                dB.organizations.Add(org);
+                dB.SaveChanges();
+            }
+        }
 
-        //public List<Models.Municipal_contract> municipal_contract()
-        //{
-        //    using (DB db = new DB())
-        //    {
-        //        var municipal_conctract = db.municipal_Contracts.ToList();
-        //        return municipal_conctract;
-        //    }
-        //}
+        public void EditOrganization(Models.Organization updateOrg)
+        {
+            using (DB dB = new DB())
+            {
+                //Models.Applications application  = new Models.Applications { Date=date, AnimalHabitat=animalH, Description =desc, Kategory = Kategort, LocalityId = locality, UrgencyOfExecution = urg};
+                Models.Organization? org = dB.organizations.FirstOrDefault(p => p.Id == updateOrg.Id);
+                if (org != null)
+                {
+                    org.Title = updateOrg.Title;
+                    org.INN = updateOrg.INN;
+                    org.KPP = updateOrg.KPP;
+                    org.TypeOf = updateOrg.TypeOf;
+                    org.Registation_addres = updateOrg.Registation_addres;
+                    org.LocalityId = updateOrg.LocalityId;
+                    org.Sole_Properietor = updateOrg.Sole_Properietor;
+                }
 
-        ////int number, string date, string animalH, string desc, string Kategort, int locality,bool urg
-        //public void SaveAct(Models.Act_Of_Capture act)
-        //{
-        //    using (DB dB = new DB())
-        //    {
-        //        dB.act_Of_Captures.Add(act);
-        //        dB.SaveChanges();
-        //    }
-        //}
-
-        //public void EditAct(Models.Act_Of_Capture updatedAct)
-        //{
-        //    using (DB dB = new DB())
-        //    {
-        //        //Models.Applications application  = new Models.Applications { Date=date, AnimalHabitat=animalH, Description =desc, Kategory = Kategort, LocalityId = locality, UrgencyOfExecution = urg};
-        //        Models.Act_Of_Capture? act = dB.act_Of_Captures.FirstOrDefault(p => p.Id == updatedAct.Id);
-        //        if (act != null)
-        //        {
-        //            act.Date_Of_Capture = updatedAct.Date_Of_Capture;
-        //            act.Amount_Of_Cats = updatedAct.Amount_Of_Cats;
-        //            act.Amount_Of_Animals = updatedAct.Amount_Of_Animals;
-        //            act.Amount_Of_Dogs = updatedAct.Amount_Of_Dogs;
-        //            act.Act_Number = updatedAct.Act_Number;
-        //            act.Municipal_ContractId = updatedAct.Municipal_ContractId;
-        //            act.OrganizationId = updatedAct.OrganizationId;
-        //            act.Target = updatedAct.Target;
-        //        }
-
-        //        dB.SaveChanges();
-        //    }
-        //}
+                dB.SaveChanges();
+            }
+        }
     }
 }

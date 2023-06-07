@@ -146,3 +146,14 @@ C:\Users\User\source\repos\ciSharp\Проект Отлов животных\obj\
 C:\Users\User\source\repos\ciSharp\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.SearchApplication.resources
 C:\Users\User\source\repos\ciSharp\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.SearchContract.resources
 C:\Users\User\source\repos\ciSharp\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.SearchOrganisation.resources
+C:\Users\Andrey\source\repos\Dinol4ik\ciSharp\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.AddActForm.resources
+C:\Users\Andrey\source\repos\Dinol4ik\ciSharp\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.Contract.resources
+C:\Users\Andrey\source\repos\Dinol4ik\ciSharp\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.EditAct.resources
+C:\Users\Andrey\source\repos\Dinol4ik\ciSharp\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.EditApplication.resources
+C:\Users\Andrey\source\repos\Dinol4ik\ciSharp\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.EditContract.resources
+C:\Users\Andrey\source\repos\Dinol4ik\ciSharp\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.EditOrganisation.resources
+C:\Users\Andrey\source\repos\Dinol4ik\ciSharp\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.Organisation.resources
+C:\Users\Andrey\source\repos\Dinol4ik\ciSharp\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.SearchAct.resources
+C:\Users\Andrey\source\repos\Dinol4ik\ciSharp\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.SearchApplication.resources
+C:\Users\Andrey\source\repos\Dinol4ik\ciSharp\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.SearchContract.resources
+C:\Users\Andrey\source\repos\Dinol4ik\ciSharp\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.SearchOrganisation.resources
