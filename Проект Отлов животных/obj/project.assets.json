@@ -1076,26 +1076,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\Никто\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\ciSharp\\Проект Отлов животных\\Проект Отлов животных.csproj",
+      "projectUniqueName": "C:\\Users\\Никто\\source\\repos\\sharpTeam\\Проект Отлов животных\\Проект Отлов животных.csproj",
       "projectName": "Проект Отлов животных",
-      "projectPath": "C:\\Users\\User\\source\\repos\\ciSharp\\Проект Отлов животных\\Проект Отлов животных.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\ciSharp\\Проект Отлов животных\\obj\\",
+      "projectPath": "C:\\Users\\Никто\\source\\repos\\sharpTeam\\Проект Отлов животных\\Проект Отлов животных.csproj",
+      "packagesPath": "C:\\Users\\Никто\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Никто\\source\\repos\\sharpTeam\\Проект Отлов животных\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Никто\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0-windows"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1148,7 +1146,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
