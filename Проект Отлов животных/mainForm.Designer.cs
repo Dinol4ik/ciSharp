@@ -88,6 +88,7 @@
             AddContractBut.TabIndex = 5;
             AddContractBut.Text = "Добавление контракта";
             AddContractBut.UseVisualStyleBackColor = true;
+            AddContractBut.Click += AddContractBut_Click;
             // 
             // label1
             // 
@@ -171,6 +172,7 @@
             SearchContractBut.TabIndex = 14;
             SearchContractBut.Text = "Список контрактов";
             SearchContractBut.UseVisualStyleBackColor = true;
+            SearchContractBut.Click += SearchContractBut_Click;
             // 
             // mainForm
             // 

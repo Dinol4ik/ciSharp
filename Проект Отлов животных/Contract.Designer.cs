@@ -28,111 +28,122 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.AddContractBut = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Номер";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 1;
+            AddContractBut = new Button();
+            dateTimePicker2 = new DateTimePicker();
+            label8 = new Label();
+            OrganizationName = new ComboBox();
+            label6 = new Label();
+            textBox4 = new TextBox();
+            dateTimePicker1 = new DateTimePicker();
+            label5 = new Label();
+            label9 = new Label();
+            SuspendLayout();
             // 
             // AddContractBut
             // 
-            this.AddContractBut.Location = new System.Drawing.Point(155, 87);
-            this.AddContractBut.Name = "AddContractBut";
-            this.AddContractBut.Size = new System.Drawing.Size(75, 23);
-            this.AddContractBut.TabIndex = 2;
-            this.AddContractBut.Text = "Добавить";
-            this.AddContractBut.UseVisualStyleBackColor = true;
-            this.AddContractBut.Click += new System.EventHandler(this.AddContractBut_Click);
+            AddContractBut.Location = new Point(297, 298);
+            AddContractBut.Name = "AddContractBut";
+            AddContractBut.Size = new Size(75, 23);
+            AddContractBut.TabIndex = 2;
+            AddContractBut.Text = "Добавить";
+            AddContractBut.UseVisualStyleBackColor = true;
+            AddContractBut.Click += AddContractBut_Click;
             // 
-            // label2
+            // dateTimePicker2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(155, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 15);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Дата заключения";
+            dateTimePicker2.Location = new Point(297, 143);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(200, 23);
+            dateTimePicker2.TabIndex = 64;
             // 
-            // label3
+            // label8
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(281, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 15);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Дата действия";
+            label8.AutoSize = true;
+            label8.Location = new Point(167, 149);
+            label8.Name = "label8";
+            label8.Size = new Size(68, 15);
+            label8.TabIndex = 63;
+            label8.Text = "Дата конца";
             // 
-            // label4
+            // OrganizationName
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(420, 24);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 15);
-            this.label4.TabIndex = 5;
+            OrganizationName.FormattingEnabled = true;
+            OrganizationName.Location = new Point(297, 241);
+            OrganizationName.Name = "OrganizationName";
+            OrganizationName.Size = new Size(121, 23);
+            OrganizationName.TabIndex = 62;
             // 
-            // textBox2
+            // label6
             // 
-            this.textBox2.Location = new System.Drawing.Point(155, 42);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 6;
+            label6.AutoSize = true;
+            label6.Location = new Point(167, 201);
+            label6.Name = "label6";
+            label6.Size = new Size(103, 15);
+            label6.TabIndex = 61;
+            label6.Text = "Номер контракта";
             // 
-            // textBox3
+            // textBox4
             // 
-            this.textBox3.Location = new System.Drawing.Point(281, 42);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 7;
+            textBox4.Location = new Point(297, 198);
+            textBox4.Multiline = true;
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(161, 24);
+            textBox4.TabIndex = 60;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(297, 79);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(200, 23);
+            dateTimePicker1.TabIndex = 59;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(167, 241);
+            label5.Name = "label5";
+            label5.Size = new Size(79, 15);
+            label5.TabIndex = 58;
+            label5.Text = "Организация";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(167, 85);
+            label9.Name = "label9";
+            label9.Size = new Size(77, 15);
+            label9.TabIndex = 57;
+            label9.Text = "Дата начала ";
             // 
             // Contract
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.AddContractBut);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Name = "Contract";
-            this.Text = "Contract";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(dateTimePicker2);
+            Controls.Add(label8);
+            Controls.Add(OrganizationName);
+            Controls.Add(label6);
+            Controls.Add(textBox4);
+            Controls.Add(dateTimePicker1);
+            Controls.Add(label5);
+            Controls.Add(label9);
+            Controls.Add(AddContractBut);
+            Name = "Contract";
+            Text = "Contract";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
-        private TextBox textBox1;
         private Button AddContractBut;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private DateTimePicker dateTimePicker2;
+        private Label label8;
+        private ComboBox OrganizationName;
+        private Label label6;
+        private TextBox textBox4;
+        private DateTimePicker dateTimePicker1;
+        private Label label5;
+        private Label label9;
     }
 }

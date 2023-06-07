@@ -51,13 +51,21 @@ namespace Проект_Отлов_животных
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(label2.Text);
+            try
+            {
+                int id = int.Parse(label2.Text);
 
-            if (data.Find(x => x.Id == id) != null) { data.Remove(data.Find(x => x.Id == id)); }
-            AplicationHandler aplicationHandler = new AplicationHandler();
-            aplicationHandler.DeleteAplication(id);
-            dataGridView1.DataSource = data.GetRange(0, data.Count);
-            dataGridView1.Refresh();
+                if (data.Find(x => x.Id == id) != null) { data.Remove(data.Find(x => x.Id == id)); }
+                AplicationHandler aplicationHandler = new AplicationHandler();
+                aplicationHandler.DeleteAplication(id);
+                dataGridView1.DataSource = data.GetRange(0, data.Count);
+                dataGridView1.Refresh();
+                MessageBox.Show("Запись удалена");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Произошла ошибка при удалении");
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -72,22 +80,30 @@ namespace Проект_Отлов_животных
 
         private void button3_Click(object sender, EventArgs e)
         {
-
-            Models.Locality localityID = (Models.Locality)localityAdress.SelectedItem;
-            Models.Applications applications = new Models.Applications
+            try
             {
-                Id = int.Parse(label2.Text),
-                Date = dateTimePicker1.Value.ToString(),
-                Description = textBox4.Text,
-                Kategory = listBox1.SelectedItem.ToString(),
-                //Locality = localityID,
-                AnimalHabitat = textBox3.Text,
-                LocalityId = localityID.Id,
-                number = int.Parse(textBox2.Text),
-                UrgencyOfExecution = Convert.ToBoolean(checkBox1.Checked)
-            };
-            AplicationHandler aplicationHandler = new AplicationHandler();
-            aplicationHandler.EditAplication(applications);
+                Models.Locality localityID = (Models.Locality)localityAdress.SelectedItem;
+                Models.Applications applications = new Models.Applications
+                {
+                    Id = int.Parse(label2.Text),
+                    Date = dateTimePicker1.Value.ToString(),
+                    Description = textBox4.Text,
+                    Kategory = listBox1.SelectedItem.ToString(),
+                    //Locality = localityID,
+                    AnimalHabitat = textBox3.Text,
+                    LocalityId = localityID.Id,
+                    number = int.Parse(textBox2.Text),
+                    UrgencyOfExecution = Convert.ToBoolean(checkBox1.Checked)
+                };
+                AplicationHandler aplicationHandler = new AplicationHandler();
+                aplicationHandler.EditAplication(applications);
+                MessageBox.Show("Запись успешно изменена!");
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Произошла ошибка проверьте правильность данных!");
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

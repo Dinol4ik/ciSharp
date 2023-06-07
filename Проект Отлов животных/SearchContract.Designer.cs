@@ -131,7 +131,7 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(794, 236);
+            dataGridView1.Location = new Point(541, 230);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
@@ -141,7 +141,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(1099, 149);
+            button1.Location = new Point(770, 162);
             button1.Name = "button1";
             button1.Size = new Size(100, 23);
             button1.TabIndex = 36;
@@ -150,7 +150,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(1099, 120);
+            textBox1.Location = new Point(770, 133);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 35;
@@ -158,7 +158,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(1124, 102);
+            label1.Location = new Point(795, 115);
             label1.Name = "label1";
             label1.Size = new Size(44, 15);
             label1.TabIndex = 34;

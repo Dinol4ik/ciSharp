@@ -34,7 +34,6 @@
             dataGridView1 = new DataGridView();
             label2 = new Label();
             button2 = new Button();
-            label3 = new Label();
             localityAdress = new ComboBox();
             label6 = new Label();
             textBox2 = new TextBox();
@@ -106,15 +105,6 @@
             button2.TabIndex = 5;
             button2.Text = "Удалить";
             button2.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(685, 43);
-            label3.Name = "label3";
-            label3.Size = new Size(38, 15);
-            label3.TabIndex = 6;
-            label3.Text = "label3";
             // 
             // localityAdress
             // 
@@ -259,7 +249,6 @@
             Controls.Add(label9);
             Controls.Add(listBox1);
             Controls.Add(textBox4);
-            Controls.Add(label3);
             Controls.Add(button2);
             Controls.Add(label2);
             Controls.Add(dataGridView1);
@@ -281,7 +270,6 @@
         private DataGridView dataGridView1;
         private Label label2;
         private Button button2;
-        private Label label3;
         private ComboBox localityAdress;
         private Label label6;
         private TextBox textBox2;

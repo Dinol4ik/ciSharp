@@ -43,26 +43,36 @@ namespace Проект_Отлов_животных
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var date = dateTimePicker1.Value.ToString();
-            var kategory = listBox1.SelectedItem.ToString();
-            var desc = textBox3.Text;
-            //var localityID = new Models.Locality { Adress = comboBox1.SelectedItem.ToString(),  };
-            Models.Locality localityID = (Models.Locality)localityAdress.SelectedItem;
-            bool chekBox = checkBox1.Checked;
-            var animalHabital = textBox1.Text;
-            var number = int.Parse(textBox2.Text);
-            Models.Applications applications = new Models.Applications
-            { Date = date,
-                Description = desc,
-                Kategory = kategory,
-                //Locality = localityID,
-                AnimalHabitat = animalHabital,
-                LocalityId = localityID.Id,
-                number = number,
-                UrgencyOfExecution = chekBox 
-            };
-            AplicationHandler aplicationHandler = new AplicationHandler();
-            aplicationHandler.SaveAplication(applications);
+            try
+            {
+                var date = dateTimePicker1.Value.ToString();
+                var kategory = listBox1.SelectedItem.ToString();
+                var desc = textBox3.Text;
+                //var localityID = new Models.Locality { Adress = comboBox1.SelectedItem.ToString(),  };
+                Models.Locality localityID = (Models.Locality)localityAdress.SelectedItem;
+                bool chekBox = checkBox1.Checked;
+                var animalHabital = textBox1.Text;
+                var number = int.Parse(textBox2.Text);
+                Models.Applications applications = new Models.Applications
+                {
+                    Date = date,
+                    Description = desc,
+                    Kategory = kategory,
+                    //Locality = localityID,
+                    AnimalHabitat = animalHabital,
+                    LocalityId = localityID.Id,
+                    number = number,
+                    UrgencyOfExecution = chekBox
+                };
+                AplicationHandler aplicationHandler = new AplicationHandler();
+                aplicationHandler.SaveAplication(applications);
+                MessageBox.Show("Заявка добавлена");
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Ошибка, проверьте правильность данных");
+            }
         }
 
         private void RegisterApplicationForm_Load(object sender, EventArgs e)

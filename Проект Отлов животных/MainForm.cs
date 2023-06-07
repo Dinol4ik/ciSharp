@@ -70,11 +70,6 @@ namespace Проект_Отлов_животных
             application.ShowDialog();
         }
 
-        private void AddContractBut_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void AccountBtn_Click_1(object sender, EventArgs e)
         {
             //AccountForm frm = new AccountForm(data);
@@ -99,16 +94,6 @@ namespace Проект_Отлов_животных
             AddActForm actForm = new AddActForm(organisation, contract, application);
             actForm.ShowDialog();
         }
-
-        private void SearchContractBut_Click(object sender, EventArgs e)
-        {
-            MunicipalHandler contract = new MunicipalHandler();
-            var org = contract.OrganizationsName();
-            var contracts = contract.GetContractsList();
-            SearchContract Form = new SearchContract(contracts, org);
-            Form.ShowDialog();
-        }
-
         private void OrgSearchBut_Click(object sender, EventArgs e)
         {
             RegisterOrganization organizationHandler = new RegisterOrganization();
@@ -133,6 +118,23 @@ namespace Проект_Отлов_животных
 
             SearchAct actForm = new SearchAct(actList, organisation, contract, application);
             actForm.ShowDialog();
+        }
+
+        private void SearchContractBut_Click(object sender, EventArgs e)
+        {
+            MunicipalHandler contract = new MunicipalHandler();
+            var org = contract.OrganizationsName();
+            var contracts = contract.GetContractsList();
+            SearchContract Form = new SearchContract(contracts, org);
+            Form.ShowDialog();
+        }
+
+        private void AddContractBut_Click(object sender, EventArgs e)
+        {
+            MunicipalHandler contract = new MunicipalHandler();
+            var org = contract.OrganizationsName();
+            Contract Form = new Contract(org);
+            Form.ShowDialog();
         }
     }
 }

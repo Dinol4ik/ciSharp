@@ -49,32 +49,51 @@ namespace Проект_Отлов_животных
 
         private void button3_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(label2.Text);
-
-            Models.Organization organisationId = (Models.Organization)OrganizationName.SelectedItem;
-            Models.Municipal_contract contract_edit = new Models.Municipal_contract
+            try
             {
-                Id = id,
-                Date_Of_Action = dateTimePicker1.Value.ToString(),
-                Date_Of_Conclusion = dateTimePicker2.Value.ToString(),
-                Number = long.Parse(textBox2.Text),
-                OrganizationId = organisationId.Id
+                int id = int.Parse(label2.Text);
 
-            };
-            MunicipalHandler aplicationHandler = new MunicipalHandler();
-            aplicationHandler.EditContract(contract_edit);
+                Models.Organization organisationId = (Models.Organization)OrganizationName.SelectedItem;
+                Models.Municipal_contract contract_edit = new Models.Municipal_contract
+                {
+                    Id = id,
+                    Date_Of_Action = dateTimePicker1.Value.ToString(),
+                    Date_Of_Conclusion = dateTimePicker2.Value.ToString(),
+                    Number = long.Parse(textBox2.Text),
+                    OrganizationId = organisationId.Id
+
+                };
+                MunicipalHandler aplicationHandler = new MunicipalHandler();
+                aplicationHandler.EditContract(contract_edit);
+                MessageBox.Show("Запись отредактирована!");
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Произошла ошибка, проверьте правильность данных!");
+            }
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(label2.Text);
 
-            if (data.Find(x => x.Id == id) != null) { data.Remove(data.Find(x => x.Id == id)); }
-            MunicipalHandler aplicationHandler = new MunicipalHandler();
-            aplicationHandler.DeleteContract(id);
-            dataGridView1.DataSource = data.GetRange(0, data.Count);
-            dataGridView1.Refresh();
+            try
+            {
+                int id = int.Parse(label2.Text);
+
+                if (data.Find(x => x.Id == id) != null) { data.Remove(data.Find(x => x.Id == id)); }
+                MunicipalHandler aplicationHandler = new MunicipalHandler();
+                aplicationHandler.DeleteContract(id);
+                dataGridView1.DataSource = data.GetRange(0, data.Count);
+                dataGridView1.Refresh();
+                MessageBox.Show("Запись Удалена");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Удалить не получилось");
+
+            }
         }
     }
 }
