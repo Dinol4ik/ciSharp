@@ -31,24 +31,32 @@ namespace Проект_Отлов_животных
 
         private void AddActBut_Click(object sender, EventArgs e)
         {
-            Models.Organization organisationId = (Models.Organization)comboBox1.SelectedItem;
-            Models.Municipal_contract contractId = (Models.Municipal_contract)comboBox2.SelectedItem;
-            Models.Applications applicate = (Models.Applications)comboBox3.SelectedItem;
-            Models.Act_Of_Capture applications = new Models.Act_Of_Capture
+            try
             {
-                Act_Number = long.Parse(textBox9.Text),
-                Amount_Of_Dogs = textBox8.Text,
-                Amount_Of_Cats = textBox3.Text,
-                Amount_Of_Animals = textBox4.Text,
-                Target = textBox6.Text,
-                Date_Of_Capture = dateTimePicker1.Value.ToString(),
-                OrganizationId = organisationId.Id,
-                Municipal_ContractId = contractId.Id,
-                ApplicationId = applicate.Id
-            };
-            //if (data.Find(x => x.Id == id) != null) { data.Remove(data.Find(x => x.Id == id)); }
-            RegisterAct aplicationHandler = new RegisterAct();
-            aplicationHandler.SaveAct(applications);
+                Models.Organization organisationId = (Models.Organization)comboBox1.SelectedItem;
+                Models.Municipal_contract contractId = (Models.Municipal_contract)comboBox2.SelectedItem;
+                Models.Applications applicate = (Models.Applications)comboBox3.SelectedItem;
+                Models.Act_Of_Capture applications = new Models.Act_Of_Capture
+                {
+                    Act_Number = long.Parse(textBox9.Text),
+                    Amount_Of_Dogs = textBox8.Text,
+                    Amount_Of_Cats = textBox3.Text,
+                    Amount_Of_Animals = textBox4.Text,
+                    Target = textBox6.Text,
+                    Date_Of_Capture = dateTimePicker1.Value.ToString(),
+                    OrganizationId = organisationId.Id,
+                    Municipal_ContractId = contractId.Id,
+                    ApplicationId = applicate.Id
+                };
+                //if (data.Find(x => x.Id == id) != null) { data.Remove(data.Find(x => x.Id == id)); }
+                RegisterAct aplicationHandler = new RegisterAct();
+                aplicationHandler.SaveAct(applications);
+                MessageBox.Show("Данные добавленны");
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка при добавлении");
+            }
         }
     }
 }

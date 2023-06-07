@@ -43,34 +43,41 @@ namespace Проект_Отлов_животных
 
         private void button3_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(label2.Text);
-
-            Models.Organization organisationId = (Models.Organization)comboBox1.SelectedItem;
-            Models.Municipal_contract contractId = (Models.Municipal_contract)comboBox2.SelectedItem;
-            Models.Act_Of_Capture acted = new Models.Act_Of_Capture
+            try
             {
-                Id = int.Parse(label2.Text),
-                Act_Number = long.Parse(textBox9.Text),
-                Amount_Of_Dogs = textBox8.Text,
-                Amount_Of_Cats = textBox3.Text,
-                Amount_Of_Animals = textBox4.Text,
-                Target = textBox6.Text,
-                Date_Of_Capture = dateTimePicker1.Value.ToString(),
-                OrganizationId = organisationId.Id,
-                Municipal_ContractId = contractId.Id
-            };
-            //if (data.Find(x => x.Id == id) != null) { data.Remove(data.Find(x => x.Id == id)); }
+                int id = int.Parse(label2.Text);
 
-            RegisterAct register = new RegisterAct();
-            register.EditAct(acted);
-            dataGridView1.DataSource = data.GetRange(0, data.Count);
-            dataGridView1.Refresh();
+                Models.Organization organisationId = (Models.Organization)comboBox1.SelectedItem;
+                Models.Municipal_contract contractId = (Models.Municipal_contract)comboBox2.SelectedItem;
+                Models.Act_Of_Capture acted = new Models.Act_Of_Capture
+                {
+                    Id = int.Parse(label2.Text),
+                    Act_Number = long.Parse(textBox9.Text),
+                    Amount_Of_Dogs = textBox8.Text,
+                    Amount_Of_Cats = textBox3.Text,
+                    Amount_Of_Animals = textBox4.Text,
+                    Target = textBox6.Text,
+                    Date_Of_Capture = dateTimePicker1.Value.ToString(),
+                    OrganizationId = organisationId.Id,
+                    Municipal_ContractId = contractId.Id
+                };
+                //if (data.Find(x => x.Id == id) != null) { data.Remove(data.Find(x => x.Id == id)); }
+
+                RegisterAct register = new RegisterAct();
+                register.EditAct(acted);
+                dataGridView1.DataSource = data.GetRange(0, data.Count);
+                dataGridView1.Refresh();
+                MessageBox.Show("Данные обновленны");
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка при обновлении данных!");
+            }
 
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
             label2.Text = dataGridView1[0, dataGridView1.CurrentRow.Index].Value.ToString();
             var number = dataGridView1[1, dataGridView1.CurrentRow.Index].Value.ToString();
             var dogs_amount = dataGridView1[2, dataGridView1.CurrentRow.Index].Value.ToString();
@@ -89,13 +96,21 @@ namespace Проект_Отлов_животных
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(label2.Text);
+            try
+            {
+                int id = int.Parse(label2.Text);
 
-            if (data.Find(x => x.Id == id) != null) { data.Remove(data.Find(x => x.Id == id)); }
-            RegisterAct aplicationHandler = new RegisterAct();
-            aplicationHandler.DeleteAct(id);
-            dataGridView1.DataSource = data.GetRange(0, data.Count);
-            dataGridView1.Refresh();
+                if (data.Find(x => x.Id == id) != null) { data.Remove(data.Find(x => x.Id == id)); }
+                RegisterAct aplicationHandler = new RegisterAct();
+                aplicationHandler.DeleteAct(id);
+                dataGridView1.DataSource = data.GetRange(0, data.Count);
+                dataGridView1.Refresh();
+                MessageBox.Show("Данные удалены");
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка при удалении данных!");
+            }
         }
     }
 }
