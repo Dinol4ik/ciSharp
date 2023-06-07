@@ -12,14 +12,15 @@ namespace Проект_Отлов_животных
 {
     public partial class mainForm : Form
     {
-        public mainForm(List<Models.User> data)
+        //List<Models.User> data
+        public mainForm()
         {
             InitializeComponent();
-            accountName.Text = data[0].Login;
-            this.data = data;
+            //accountName.Text = data[0].Login;
+            //this.data = data;
             StartPosition = FormStartPosition.CenterParent;
         }
-        List<Models.User> data;
+        //List<Models.User> data;
 
         private void mainForm_Load(object sender, EventArgs e)
         {
@@ -41,16 +42,63 @@ namespace Проект_Отлов_животных
 
         }
 
-        private void AccountBtn_Click(object sender, EventArgs e)
+
+        private void OrgAddBtn_Click(object sender, EventArgs e)
         {
-            AccountForm frm = new AccountForm(data);
-            frm.ShowDialog();
+            Organisation org = new Organisation();
+            org.ShowDialog();
+        }
+
+        private void OrgDeleteBut_Click(object sender, EventArgs e)
+        {
+            SearchOrganisation org = new SearchOrganisation();
+            org.ShowDialog();
         }
 
         private void AplicationRegBtn_Click(object sender, EventArgs e)
         {
-            RegisterApplicationForm frap = new RegisterApplicationForm();
+            AplicationHandler allLocality = new AplicationHandler();
+            var locality = allLocality.localities();
+            RegisterApplicationForm frap = new RegisterApplicationForm(locality);
             frap.ShowDialog();
+        }
+
+        private void SearchApplicationBut_Click(object sender, EventArgs e)
+        {
+            AplicationHandler aplication = new AplicationHandler();
+            var aplicationList = aplication.GetApplicationList();
+            AplicationHandler allLocality = new AplicationHandler();
+            var locality = allLocality.localities();
+            SearchApplication application = new SearchApplication(aplicationList, locality);
+            application.ShowDialog();
+        }
+
+        private void ActBtn_Click(object sender, EventArgs e)
+        {
+            AddActForm act = new AddActForm();
+            act.ShowDialog();
+        }
+
+        private void SearchActBut_Click(object sender, EventArgs e)
+        {
+            SearchAct act = new SearchAct();
+            act.ShowDialog();
+        }
+
+        private void AddContractBut_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AccountBtn_Click_1(object sender, EventArgs e)
+        {
+            //AccountForm frm = new AccountForm(data);
+            //frm.ShowDialog();
+        }
+
+        private void mainForm_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

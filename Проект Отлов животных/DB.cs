@@ -11,6 +11,13 @@ namespace Проект_Отлов_животных
     internal class DB : DbContext
     {
         public DbSet<User> Users { get; set; } = null!;
+        public DbSet<Applications> Applications { get; set; } = null!;
+        public DbSet<Locality> Locality { get; set; } = null!;
+        public DbSet<Type_Of_Organization> type_Of_Organizations { get; set; } = null!;
+        public DbSet<Organization> organizations { get; set; } = null!;
+        public DbSet<Municipal_contract> municipal_Contracts { get; set; } = null!;
+        public DbSet<Act_Of_Capture> act_Of_Captures { get; set; } = null!;
+        public DbSet<Card_Animal> card_Animals { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
