@@ -73,18 +73,6 @@ namespace Проект_Отлов_животных
             application.ShowDialog();
         }
 
-        private void ActBtn_Click(object sender, EventArgs e)
-        {
-            AddActForm act = new AddActForm();
-            act.ShowDialog();
-        }
-
-        private void SearchActBut_Click(object sender, EventArgs e)
-        {
-            SearchAct act = new SearchAct();
-            act.ShowDialog();
-        }
-
         private void AddContractBut_Click(object sender, EventArgs e)
         {
 
@@ -99,6 +87,32 @@ namespace Проект_Отлов_животных
         private void mainForm_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void SearchActBut_Click(object sender, EventArgs e)
+        {
+            RegisterAct act = new RegisterAct();
+            var actList = act.GetActList();
+
+            var organisation = act.organisation();
+            var contract = act.municipal_contract();
+            var application = act.GetApplication();
+
+            SearchAct actForm = new SearchAct(actList, organisation, contract, application);
+            actForm.ShowDialog();
+        }
+
+        private void ActBtn_Click(object sender, EventArgs e)
+        {
+            RegisterAct act = new RegisterAct();
+            var actList = act.GetActList();
+
+            var organisation = act.organisation();
+            var contract = act.municipal_contract();
+            var application = act.GetApplication();
+
+            AddActForm actForm = new AddActForm(organisation, contract, application);
+            actForm.ShowDialog();
         }
     }
 }

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,20 +13,42 @@ namespace Проект_Отлов_животных
 {
     public partial class AddActForm : Form
     {
-        public AddActForm()
+        public AddActForm(List<Models.Organization> organizations, List<Models.Municipal_contract> contract, List<Models.Applications> applications)
         {
             InitializeComponent();
+            comboBox3.DataSource = applications;
+            comboBox3.DisplayMember = "number";
+            comboBox3.ValueMember = "Id";
+
+            comboBox1.DataSource = organizations;
+            comboBox1.DisplayMember = "Title";
+            comboBox1.ValueMember = "Id";
+
+            comboBox2.DataSource = contract;
+            comboBox2.DisplayMember = "Number";
+            comboBox2.ValueMember = "Id";
         }
 
         private void AddActBut_Click(object sender, EventArgs e)
         {
-            string number_act = textBox1.Text;
-            string dogs = textBox2.Text;
-            string cats = textBox3.Text;
-            string animals = textBox4.Text;
-            string date = textBox5.Text;
-            string target = textBox6.Text;
-            string contract = textBox7.Text;
+            Models.Organization organisationId = (Models.Organization)comboBox1.SelectedItem;
+            Models.Municipal_contract contractId = (Models.Municipal_contract)comboBox2.SelectedItem;
+            Models.Applications applicate = (Models.Applications)comboBox3.SelectedItem;
+            Models.Act_Of_Capture applications = new Models.Act_Of_Capture
+            {
+                Act_Number = long.Parse(textBox9.Text),
+                Amount_Of_Dogs = textBox8.Text,
+                Amount_Of_Cats = textBox3.Text,
+                Amount_Of_Animals = textBox4.Text,
+                Target = textBox6.Text,
+                Date_Of_Capture = dateTimePicker1.Value.ToString(),
+                OrganizationId = organisationId.Id,
+                Municipal_ContractId = contractId.Id,
+                ApplicationId = applicate.Id
+            };
+            //if (data.Find(x => x.Id == id) != null) { data.Remove(data.Find(x => x.Id == id)); }
+            RegisterAct aplicationHandler = new RegisterAct();
+            aplicationHandler.SaveAct(applications);
         }
     }
 }
