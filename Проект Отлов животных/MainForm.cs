@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Contracts;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
+using static Проект_Отлов_животных.Models;
 
 namespace Проект_Отлов_животных
 {
@@ -113,6 +116,16 @@ namespace Проект_Отлов_животных
 
             AddActForm actForm = new AddActForm(organisation, contract, application);
             actForm.ShowDialog();
+        }
+
+        private void SearchApplicationBut_Click_1(object sender, EventArgs e)
+        {
+        }
+
+        private void SearchContractBut_Click(object sender, EventArgs e)
+        {
+            SearchContract Form = new SearchContract();
+            Form.ShowDialog();
         }
     }
 }

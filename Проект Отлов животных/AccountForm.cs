@@ -18,8 +18,6 @@ namespace Проект_Отлов_животных
             this.data = data;
             label1.Text = data[0].Login;
             label2.Text = data[0].Role;
-            label3.Text = data[0].Company;
-            label4.Text = data[0].OMS;
         }
         List<Models.User> data;
     }

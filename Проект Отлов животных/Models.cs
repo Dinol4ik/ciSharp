@@ -16,8 +16,8 @@ namespace Проект_Отлов_животных
             public string? Login { get; set; }
             public string? Password { get; set; }
             public string? Role { get; set; }
-            public string? Company { get; set; }
-            public string? OMS { get; set; }
+            public int? OrganizationId { get; set; }
+            public Organization? Organization  { get; set; }
         }
         public class Locality
         {
@@ -64,9 +64,10 @@ namespace Проект_Отлов_животных
             public int LocalityId { get; set; }
             public Locality? Locality { get; set; }
             public int TypeOfId  { get; set; }
-            public Locality? TypeOf { get; set; }
+            public Type_Of_Organization? TypeOf { get; set; }
             public List<Municipal_contract> Municipal_contracts { get; set; } = new();
             public List<Act_Of_Capture> act_Of_Captures { get; set; } = new();
+            public List<User> users { get; set; } = new();
         }
 
         public class Municipal_contract

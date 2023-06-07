@@ -14,8 +14,8 @@ namespace Проект_Отлов_животных
         async private void signIn_Click(object sender, EventArgs e)
         {
             AuthHandler authHandler = new AuthHandler();
-           var auth =  authHandler.autharization(textLogin.Text,textPassword.Text);
-            if (auth.Count>0)
+            var auth = authHandler.autharization(textLogin.Text, textPassword.Text);
+            if (auth.Count > 0)
             {
                 //mainForm mainForm = new mainForm(auth);
                 Visible = false;

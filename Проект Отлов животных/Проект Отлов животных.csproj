@@ -22,4 +22,12 @@
     <Folder Include="Migrations\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\.editorconfig" />
+  </ItemGroup>
+
 </Project>

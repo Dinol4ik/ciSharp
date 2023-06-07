@@ -66,6 +66,7 @@
             // 
             textPassword.Location = new Point(341, 171);
             textPassword.Name = "textPassword";
+            textPassword.PasswordChar = '*';
             textPassword.Size = new Size(100, 23);
             textPassword.TabIndex = 4;
             textPassword.TextChanged += textPassword_TextChanged;
