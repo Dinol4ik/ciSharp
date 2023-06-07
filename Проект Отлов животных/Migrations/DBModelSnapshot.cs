@@ -246,20 +246,10 @@ namespace Проект_Отлов_животных.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("LocalityId")
-                        .HasColumnType("integer");
-
                     b.Property<string>("Title")
                         .HasColumnType("text");
 
-                    b.Property<int?>("Type_Of_OrganizationId")
-                        .HasColumnType("integer");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("LocalityId");
-
-                    b.HasIndex("Type_Of_OrganizationId");
 
                     b.ToTable("type_Of_Organizations");
                 });
@@ -368,7 +358,7 @@ namespace Проект_Отлов_животных.Migrations
                         .IsRequired();
 
                     b.HasOne("Проект_Отлов_животных.Models+Type_Of_Organization", "TypeOf")
-                        .WithMany()
+                        .WithMany("Organizations")
                         .HasForeignKey("TypeOfId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -376,17 +366,6 @@ namespace Проект_Отлов_животных.Migrations
                     b.Navigation("Locality");
 
                     b.Navigation("TypeOf");
-                });
-
-            modelBuilder.Entity("Проект_Отлов_животных.Models+Type_Of_Organization", b =>
-                {
-                    b.HasOne("Проект_Отлов_животных.Models+Locality", null)
-                        .WithMany("type_Of_Organizations")
-                        .HasForeignKey("LocalityId");
-
-                    b.HasOne("Проект_Отлов_животных.Models+Type_Of_Organization", null)
-                        .WithMany("type_Of_Organizations")
-                        .HasForeignKey("Type_Of_OrganizationId");
                 });
 
             modelBuilder.Entity("Проект_Отлов_животных.Models+User", b =>
@@ -410,8 +389,6 @@ namespace Проект_Отлов_животных.Migrations
                     b.Navigation("Applications");
 
                     b.Navigation("card_Animals");
-
-                    b.Navigation("type_Of_Organizations");
                 });
 
             modelBuilder.Entity("Проект_Отлов_животных.Models+Municipal_contract", b =>
@@ -430,7 +407,7 @@ namespace Проект_Отлов_животных.Migrations
 
             modelBuilder.Entity("Проект_Отлов_животных.Models+Type_Of_Organization", b =>
                 {
-                    b.Navigation("type_Of_Organizations");
+                    b.Navigation("Organizations");
                 });
 #pragma warning restore 612, 618
         }

@@ -12,8 +12,8 @@ using Проект_Отлов_животных;
 namespace Проект_Отлов_животных.Migrations
 {
     [DbContext(typeof(DB))]
-    [Migration("20230607201920_fixBd")]
-    partial class fixBd
+    [Migration("20230607221238_newBd")]
+    partial class newBd
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -255,14 +255,9 @@ namespace Проект_Отлов_животных.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("text");
 
-                    b.Property<int?>("Type_Of_OrganizationId")
-                        .HasColumnType("integer");
-
                     b.HasKey("Id");
 
                     b.HasIndex("LocalityId");
-
-                    b.HasIndex("Type_Of_OrganizationId");
 
                     b.ToTable("type_Of_Organizations");
                 });
@@ -371,7 +366,7 @@ namespace Проект_Отлов_животных.Migrations
                         .IsRequired();
 
                     b.HasOne("Проект_Отлов_животных.Models+Type_Of_Organization", "TypeOf")
-                        .WithMany()
+                        .WithMany("Organizations")
                         .HasForeignKey("TypeOfId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -386,10 +381,6 @@ namespace Проект_Отлов_животных.Migrations
                     b.HasOne("Проект_Отлов_животных.Models+Locality", null)
                         .WithMany("type_Of_Organizations")
                         .HasForeignKey("LocalityId");
-
-                    b.HasOne("Проект_Отлов_животных.Models+Type_Of_Organization", null)
-                        .WithMany("type_Of_Organizations")
-                        .HasForeignKey("Type_Of_OrganizationId");
                 });
 
             modelBuilder.Entity("Проект_Отлов_животных.Models+User", b =>
@@ -433,7 +424,7 @@ namespace Проект_Отлов_животных.Migrations
 
             modelBuilder.Entity("Проект_Отлов_животных.Models+Type_Of_Organization", b =>
                 {
-                    b.Navigation("type_Of_Organizations");
+                    b.Navigation("Organizations");
                 });
 #pragma warning restore 612, 618
         }

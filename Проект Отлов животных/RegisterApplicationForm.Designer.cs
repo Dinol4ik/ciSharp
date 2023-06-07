@@ -76,7 +76,7 @@
             // 
             // initialBindingSource
             // 
-            initialBindingSource.DataSource = typeof(Migrations.Initial);
+            //initialBindingSource.DataSource = typeof(Migrations.Initial);
             // 
             // label1
             // 

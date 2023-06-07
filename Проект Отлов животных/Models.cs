@@ -25,7 +25,6 @@ namespace Проект_Отлов_животных
             public string? Adress { get; set; }
             public string? Administration { get; set; }
             public List<Applications> Applications { get; set; } = new(); // Заявки
-            public List<Type_Of_Organization> type_Of_Organizations { get; set; } = new();
             public List<Card_Animal> card_Animals { get; set; } = new();
 
         }
@@ -49,7 +48,7 @@ namespace Проект_Отлов_животных
         {
             public int Id { get; set; }
             public string? Title { get; set; }
-            public List<Type_Of_Organization> type_Of_Organizations { get; set; } = new();
+            public List<Organization> Organizations { get; set; } = new();
 
         }
 

@@ -47,7 +47,7 @@ namespace Проект_Отлов_животных
 
             Models.Organization organisationId = (Models.Organization)comboBox1.SelectedItem;
             Models.Municipal_contract contractId = (Models.Municipal_contract)comboBox2.SelectedItem;
-            Models.Act_Of_Capture applications = new Models.Act_Of_Capture
+            Models.Act_Of_Capture acted = new Models.Act_Of_Capture
             {
                 Id = int.Parse(label2.Text),
                 Act_Number = long.Parse(textBox9.Text),
@@ -58,10 +58,11 @@ namespace Проект_Отлов_животных
                 Date_Of_Capture = dateTimePicker1.Value.ToString(),
                 OrganizationId = organisationId.Id,
                 Municipal_ContractId = contractId.Id
-            };           
+            };
             //if (data.Find(x => x.Id == id) != null) { data.Remove(data.Find(x => x.Id == id)); }
-            
 
+            RegisterAct register = new RegisterAct();
+            register.EditAct(acted);
             dataGridView1.DataSource = data.GetRange(0, data.Count);
             dataGridView1.Refresh();
 
@@ -69,12 +70,12 @@ namespace Проект_Отлов_животных
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
             label2.Text = dataGridView1[0, dataGridView1.CurrentRow.Index].Value.ToString();
             var number = dataGridView1[1, dataGridView1.CurrentRow.Index].Value.ToString();
             var dogs_amount = dataGridView1[2, dataGridView1.CurrentRow.Index].Value.ToString();
             var cats_amount = dataGridView1[3, dataGridView1.CurrentRow.Index].Value.ToString();
-            var animals_amount = dataGridView1[4, dataGridView1.CurrentRow.Index].Value.ToString(); 
+            var animals_amount = dataGridView1[4, dataGridView1.CurrentRow.Index].Value.ToString();
             var date = dataGridView1[5, dataGridView1.CurrentRow.Index].Value.ToString();
             var target = dataGridView1[8, dataGridView1.CurrentRow.Index].Value.ToString();
             dateTimePicker1.Value = Convert.ToDateTime(date);
