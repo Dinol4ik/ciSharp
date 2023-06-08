@@ -28,111 +28,118 @@
         /// </summary>
         private void InitializeComponent()
         {
-            AddContractBut = new Button();
-            dateTimePicker2 = new DateTimePicker();
-            label8 = new Label();
-            OrganizationName = new ComboBox();
-            label6 = new Label();
-            textBox4 = new TextBox();
-            dateTimePicker1 = new DateTimePicker();
-            label5 = new Label();
-            label9 = new Label();
-            SuspendLayout();
+            this.AddContractBut = new System.Windows.Forms.Button();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.OrganizationName = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
             // 
             // AddContractBut
             // 
-            AddContractBut.Location = new Point(297, 298);
-            AddContractBut.Name = "AddContractBut";
-            AddContractBut.Size = new Size(75, 23);
-            AddContractBut.TabIndex = 2;
-            AddContractBut.Text = "Добавить";
-            AddContractBut.UseVisualStyleBackColor = true;
-            AddContractBut.Click += AddContractBut_Click;
+            this.AddContractBut.Location = new System.Drawing.Point(339, 397);
+            this.AddContractBut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AddContractBut.Name = "AddContractBut";
+            this.AddContractBut.Size = new System.Drawing.Size(86, 31);
+            this.AddContractBut.TabIndex = 2;
+            this.AddContractBut.Text = "Добавить";
+            this.AddContractBut.UseVisualStyleBackColor = true;
+            this.AddContractBut.Click += new System.EventHandler(this.AddContractBut_Click);
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Location = new Point(297, 143);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(200, 23);
-            dateTimePicker2.TabIndex = 64;
+            this.dateTimePicker2.Location = new System.Drawing.Point(339, 191);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(228, 27);
+            this.dateTimePicker2.TabIndex = 64;
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(167, 149);
-            label8.Name = "label8";
-            label8.Size = new Size(68, 15);
-            label8.TabIndex = 63;
-            label8.Text = "Дата конца";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(191, 199);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(87, 20);
+            this.label8.TabIndex = 63;
+            this.label8.Text = "Дата конца";
             // 
             // OrganizationName
             // 
-            OrganizationName.FormattingEnabled = true;
-            OrganizationName.Location = new Point(297, 241);
-            OrganizationName.Name = "OrganizationName";
-            OrganizationName.Size = new Size(121, 23);
-            OrganizationName.TabIndex = 62;
+            this.OrganizationName.FormattingEnabled = true;
+            this.OrganizationName.Location = new System.Drawing.Point(339, 321);
+            this.OrganizationName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.OrganizationName.Name = "OrganizationName";
+            this.OrganizationName.Size = new System.Drawing.Size(138, 28);
+            this.OrganizationName.TabIndex = 62;
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(167, 201);
-            label6.Name = "label6";
-            label6.Size = new Size(103, 15);
-            label6.TabIndex = 61;
-            label6.Text = "Номер контракта";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(191, 268);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(130, 20);
+            this.label6.TabIndex = 61;
+            this.label6.Text = "Номер контракта";
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(297, 198);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(161, 24);
-            textBox4.TabIndex = 60;
+            this.textBox4.Location = new System.Drawing.Point(339, 264);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(183, 31);
+            this.textBox4.TabIndex = 60;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(297, 79);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 59;
+            this.dateTimePicker1.Location = new System.Drawing.Point(339, 105);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(228, 27);
+            this.dateTimePicker1.TabIndex = 59;
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(167, 241);
-            label5.Name = "label5";
-            label5.Size = new Size(79, 15);
-            label5.TabIndex = 58;
-            label5.Text = "Организация";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(191, 321);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(102, 20);
+            this.label5.TabIndex = 58;
+            this.label5.Text = "Организация";
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(167, 85);
-            label9.Name = "label9";
-            label9.Size = new Size(77, 15);
-            label9.TabIndex = 57;
-            label9.Text = "Дата начала ";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(191, 113);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(98, 20);
+            this.label9.TabIndex = 57;
+            this.label9.Text = "Дата начала ";
             // 
             // Contract
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(dateTimePicker2);
-            Controls.Add(label8);
-            Controls.Add(OrganizationName);
-            Controls.Add(label6);
-            Controls.Add(textBox4);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(label5);
-            Controls.Add(label9);
-            Controls.Add(AddContractBut);
-            Name = "Contract";
-            Text = "Contract";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(914, 600);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.OrganizationName);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.AddContractBut);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "Contract";
+            this.Text = "Contract";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

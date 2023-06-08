@@ -168,5 +168,14 @@ namespace Проект_Отлов_животных
             application.ShowDialog();
         }
 
+        private void button1_Click(object sender, EventArgs e) //Карточка животного
+        {
+            AplicationHandler apl = new AplicationHandler();
+            var application = apl.aplicatList();
+            var locality = apl.localities();
+
+            AnimalCard actForm = new AnimalCard(application, locality);
+            actForm.ShowDialog();
+        }
     }
 }

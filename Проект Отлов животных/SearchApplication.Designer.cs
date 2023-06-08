@@ -28,239 +28,258 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            textBox1 = new TextBox();
-            button1 = new Button();
-            dataGridView1 = new DataGridView();
-            label2 = new Label();
-            button2 = new Button();
-            localityAdress = new ComboBox();
-            label6 = new Label();
-            textBox2 = new TextBox();
-            label5 = new Label();
-            textBox3 = new TextBox();
-            checkBox1 = new CheckBox();
-            dateTimePicker1 = new DateTimePicker();
-            label4 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            listBox1 = new ListBox();
-            textBox4 = new TextBox();
-            button3 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.localityAdress = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(1097, 100);
-            label1.Name = "label1";
-            label1.Size = new Size(44, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Заявка";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1254, 133);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Заявка";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(1072, 118);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 1;
+            this.textBox1.Location = new System.Drawing.Point(1225, 157);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(114, 27);
+            this.textBox1.TabIndex = 1;
             // 
             // button1
             // 
-            button1.Location = new Point(1072, 147);
-            button1.Name = "button1";
-            button1.Size = new Size(100, 23);
-            button1.TabIndex = 2;
-            button1.Text = "Поиск";
-            button1.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(1225, 196);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(114, 31);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Поиск";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(647, 209);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(554, 241);
-            dataGridView1.TabIndex = 3;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(739, 279);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(633, 321);
+            this.dataGridView1.TabIndex = 3;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(455, 24);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 4;
-            label2.Text = "label2";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(520, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 20);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "label2";
             // 
             // button2
             // 
-            button2.Location = new Point(303, 528);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 5;
-            button2.Text = "Удалить";
-            button2.UseVisualStyleBackColor = true;
+            this.button2.Location = new System.Drawing.Point(346, 704);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(86, 31);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Удалить";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // localityAdress
             // 
-            localityAdress.FormattingEnabled = true;
-            localityAdress.Location = new Point(136, 400);
-            localityAdress.Name = "localityAdress";
-            localityAdress.Size = new Size(121, 23);
-            localityAdress.TabIndex = 32;
+            this.localityAdress.FormattingEnabled = true;
+            this.localityAdress.Location = new System.Drawing.Point(155, 533);
+            this.localityAdress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.localityAdress.Name = "localityAdress";
+            this.localityAdress.Size = new System.Drawing.Size(138, 28);
+            this.localityAdress.TabIndex = 32;
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(4, 460);
-            label6.Name = "label6";
-            label6.Size = new Size(84, 15);
-            label6.TabIndex = 31;
-            label6.Text = "Номер заявки";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(5, 613);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(108, 20);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Номер заявки";
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(136, 451);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(161, 24);
-            textBox2.TabIndex = 30;
+            this.textBox2.Location = new System.Drawing.Point(155, 601);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(183, 31);
+            this.textBox2.TabIndex = 30;
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(2, 340);
-            label5.Name = "label5";
-            label5.Size = new Size(99, 15);
-            label5.TabIndex = 29;
-            label5.Text = "Место Обитание";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(2, 453);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(125, 20);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Место Обитание";
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(136, 337);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(336, 24);
-            textBox3.TabIndex = 28;
+            this.textBox3.Location = new System.Drawing.Point(155, 449);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(383, 31);
+            this.textBox3.TabIndex = 28;
             // 
             // checkBox1
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.CheckAlign = ContentAlignment.MiddleRight;
-            checkBox1.Location = new Point(403, 400);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(69, 19);
-            checkBox1.TabIndex = 27;
-            checkBox1.Text = "Срочно";
-            checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkBox1.Location = new System.Drawing.Point(461, 533);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(84, 24);
+            this.checkBox1.TabIndex = 27;
+            this.checkBox1.Text = "Срочно";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(136, 18);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 26;
+            this.dateTimePicker1.Location = new System.Drawing.Point(155, 24);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(228, 27);
+            this.dateTimePicker1.TabIndex = 26;
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(4, 408);
-            label4.Name = "label4";
-            label4.Size = new Size(103, 15);
-            label4.TabIndex = 25;
-            label4.Text = "Адресс заказчика";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(5, 544);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(131, 20);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Адресс заказчика";
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(4, 209);
-            label7.Name = "label7";
-            label7.Size = new Size(62, 15);
-            label7.TabIndex = 24;
-            label7.Text = "Описание";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(5, 279);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(79, 20);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "Описание";
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(4, 99);
-            label8.Name = "label8";
-            label8.Size = new Size(63, 15);
-            label8.TabIndex = 23;
-            label8.Text = "Категория";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(5, 132);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(81, 20);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "Категория";
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(11, 26);
-            label9.Name = "label9";
-            label9.Size = new Size(32, 15);
-            label9.TabIndex = 22;
-            label9.Text = "Дата";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(13, 35);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(41, 20);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Дата";
             // 
             // listBox1
             // 
-            listBox1.ForeColor = Color.FromArgb(0, 0, 64);
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Items.AddRange(new object[] { "Водная", "Наземно-воздушная", "Назменая" });
-            listBox1.Location = new Point(136, 56);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(172, 94);
-            listBox1.TabIndex = 21;
+            this.listBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Items.AddRange(new object[] {
+            "Водная",
+            "Наземно-воздушная",
+            "Назменая"});
+            this.listBox1.Location = new System.Drawing.Point(155, 75);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(196, 124);
+            this.listBox1.TabIndex = 21;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(136, 180);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(336, 141);
-            textBox4.TabIndex = 20;
+            this.textBox4.Location = new System.Drawing.Point(155, 240);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(383, 187);
+            this.textBox4.TabIndex = 20;
             // 
             // button3
             // 
-            button3.Location = new Point(136, 528);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 33;
-            button3.Text = "Изменить";
-            button3.UseVisualStyleBackColor = true;
+            this.button3.Location = new System.Drawing.Point(155, 704);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(86, 31);
+            this.button3.TabIndex = 33;
+            this.button3.Text = "Изменить";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // SearchApplication
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1213, 703);
-            Controls.Add(button3);
-            Controls.Add(localityAdress);
-            Controls.Add(label6);
-            Controls.Add(textBox2);
-            Controls.Add(label5);
-            Controls.Add(textBox3);
-            Controls.Add(checkBox1);
-            Controls.Add(dateTimePicker1);
-            Controls.Add(label4);
-            Controls.Add(label7);
-            Controls.Add(label8);
-            Controls.Add(label9);
-            Controls.Add(listBox1);
-            Controls.Add(textBox4);
-            Controls.Add(button2);
-            Controls.Add(label2);
-            Controls.Add(dataGridView1);
-            Controls.Add(button1);
-            Controls.Add(textBox1);
-            Controls.Add(label1);
-            Name = "SearchApplication";
-            Text = "SearchApplication";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1386, 937);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.localityAdress);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "SearchApplication";
+            this.Text = "SearchApplication";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

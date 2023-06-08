@@ -41,6 +41,14 @@ namespace Проект_Отлов_животных
                 return locality;
             }
         }
+        public List<Models.Applications> aplicatList()
+        {
+            using (DB db = new DB())
+            {
+                var apl = db.Applications.ToList();
+                return apl;
+            }
+        }
         //int number, string date, string animalH, string desc, string Kategort, int locality,bool urg
         public void SaveAplication(Models.Applications aplicate )
         {
