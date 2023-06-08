@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 using static System.Net.Mime.MediaTypeNames;
 using static Проект_Отлов_животных.Models;
 

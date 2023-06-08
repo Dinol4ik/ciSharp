@@ -8,8 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using static Проект_Отлов_животных.Models;
+using ClosedXML.Excel;
 
 namespace Проект_Отлов_животных
 {
@@ -41,7 +43,12 @@ namespace Проект_Отлов_животных
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string application = textBox1.Text;
+            AplicationHandler aplicationFinde = new AplicationHandler();
+            var title = textBox1.Text.ToString();
+            var finde = aplicationFinde.ApplicationFinde(title);
+            var d = finde;
+            dataGridView1.DataSource = d.GetRange(0, data.Count);
+            dataGridView1.Refresh();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -119,6 +126,32 @@ namespace Проект_Отлов_животных
             textBox3.Text = habit;
             textBox2.Text = number;
             checkBox1.Checked = chek;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {          
+            var path = Path.Combine(Environment.CurrentDirectory, "Export", "data.xlsx");
+
+            var wb = new XLWorkbook();
+            var sh = wb.Worksheets.Add("test");
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                foreach (DataGridViewColumn col in dataGridView1.Columns)
+                {
+                    sh.Cell(row.Index +1, col.Index + 1).SetValue(dataGridView1.Rows[row.Index].Cells[col.Index].Value.ToString());
+                }                
+            }
+            /*
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                {
+                    sh.Cell(i + 1, j + 1).SetValue(dataGridView1.CurrentCell.Value.ToString());
+                    
+                }
+            }
+            */
+            wb.SaveAs(path);
         }
     }
 }

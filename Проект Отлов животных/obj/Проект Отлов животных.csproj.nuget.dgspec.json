@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Andrey\\source\\repos\\Dinol4ik\\ciSharp\\Проект Отлов животных\\Проект Отлов животных.csproj": {}
+    "C:\\Users\\User\\source\\repos\\ciSharp\\Проект Отлов животных\\Проект Отлов животных.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Andrey\\source\\repos\\Dinol4ik\\ciSharp\\Проект Отлов животных\\Проект Отлов животных.csproj": {
+    "C:\\Users\\User\\source\\repos\\ciSharp\\Проект Отлов животных\\Проект Отлов животных.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Andrey\\source\\repos\\Dinol4ik\\ciSharp\\Проект Отлов животных\\Проект Отлов животных.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\ciSharp\\Проект Отлов животных\\Проект Отлов животных.csproj",
         "projectName": "Проект Отлов животных",
-        "projectPath": "C:\\Users\\Andrey\\source\\repos\\Dinol4ik\\ciSharp\\Проект Отлов животных\\Проект Отлов животных.csproj",
-        "packagesPath": "C:\\Users\\Andrey\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Andrey\\source\\repos\\Dinol4ik\\ciSharp\\Проект Отлов животных\\obj\\",
+        "projectPath": "C:\\Users\\User\\source\\repos\\ciSharp\\Проект Отлов животных\\Проект Отлов животных.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\ciSharp\\Проект Отлов животных\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Andrey\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,6 +40,10 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "ClosedXML": {
+              "target": "Package",
+              "version": "[0.101.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.5, )"
@@ -53,6 +53,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.5, )"
+            },
+            "Microsoft.Office.Interop.Excel": {
+              "target": "Package",
+              "version": "[15.0.4795.1001, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
@@ -78,7 +82,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

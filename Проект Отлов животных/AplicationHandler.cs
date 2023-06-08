@@ -22,6 +22,14 @@ namespace Проект_Отлов_животных
 
             }
         }
+        public bool IsValid(Models.Applications application)
+        {
+            if (application != null)
+            {
+                return true;
+            }
+            else return false;
+        }
         public void DeleteAplication(int index)
         {
             using (DB db = new DB())
@@ -52,12 +60,34 @@ namespace Проект_Отлов_животных
         //int number, string date, string animalH, string desc, string Kategort, int locality,bool urg
         public void SaveAplication(Models.Applications aplicate )
         {
-            using (DB dB = new DB())
+            if (IsValid(aplicate))
             {
-                //Models.Applications application  = new Models.Applications { Date=date, AnimalHabitat=animalH, Description =desc, Kategory = Kategort, LocalityId = locality, UrgencyOfExecution = urg};
-                dB.Applications.Add(aplicate);
-                dB.SaveChanges();
-            }          
+                using (DB dB = new DB())
+                {
+                    //Models.Applications application  = new Models.Applications { Date=date, AnimalHabitat=animalH, Description =desc, Kategory = Kategort, LocalityId = locality, UrgencyOfExecution = urg};
+                    dB.Applications.Add(aplicate);
+                    dB.SaveChanges();
+                }
+            }
+            else MessageBox.Show("Валидация не прошла");
+        }
+        public List<Models.Applications> ApplicationFinde(string title)
+        {
+            using (DB db = new DB())
+            {
+                //var aplicat = db.Applications.Where(u => EF.Functions.Like(u.Kategory.ToString(), "%во%")).AsEnumerable().ToList();
+                
+                List<Models.Applications> aplicat = new List<Models.Applications>();
+                foreach (var item in db.Applications.Where(i => (i.Kategory.Contains("На"))))
+                {
+                    aplicat.Add(item);
+                }
+                
+                //var aplicat = db.Applications.Where(i=> (i.Kategory.Contains("во"))).ToList();
+
+                //var aplicat = db.Applications.Select(s => new { s.Kategory }).ToList();
+                return aplicat;
+            }
         }
         public void EditAplication(Models.Applications aplicate)
         {

@@ -33,6 +33,7 @@ namespace Проект_Отлов_животных
                 button3.Visible = false;
 
             }
+            
 
             comboBox1.DataSource = organizations;
             comboBox1.DisplayMember = "Title";
@@ -49,6 +50,7 @@ namespace Проект_Отлов_животных
         private void button1_Click(object sender, EventArgs e)
         {
             string title = textBox1.Text;
+
         }
 
         private void button3_Click(object sender, EventArgs e)
