@@ -18,12 +18,6 @@ namespace Проект_Отлов_животных
         public Contract(List<Models.Organization> organizations, string roleUser)
         {
             InitializeComponent();
-            if (roleUser == "Оператор ОМСУ")
-            {
-                button2.Visible = false;
-                button3.Visible = false;
-
-            }
             OrganizationName.DataSource = organizations;
             OrganizationName.DisplayMember = "title";
             OrganizationName.ValueMember = "Id";

@@ -10,15 +10,16 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static Проект_Отлов_животных.Models;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace Проект_Отлов_животных
 {
     public partial class SearchContract : Form
     {
-        public SearchContract(List<Municipal_ContractC> contracts, List<Models.Organization> organizations, string roleUser)
+        public SearchContract(List<Models.User> users, List<Municipal_ContractC> contracts, List<Models.Organization> organizations, string roleUser)
         {
             data = contracts;
-
+            user= users;
             InitializeComponent();
             if (roleUser == "Куратор ВетСлужбы"
                 || roleUser == "Подписант ВетСлужбы"
@@ -36,6 +37,7 @@ namespace Проект_Отлов_животных
             dataGridView1.DataSource = data.GetRange(0, data.Count);
         }
         List<Municipal_ContractC> data;
+        List<Models.User> user;
         private void button1_Click(object sender, EventArgs e)
         {
             string number = textBox1.Text;
@@ -61,22 +63,27 @@ namespace Проект_Отлов_животных
         {
             try
             {
-                int id = int.Parse(label2.Text);
-
-                Models.Organization organisationId = (Models.Organization)OrganizationName.SelectedItem;
-                Models.Municipal_contract contract_edit = new Models.Municipal_contract
+                UserRole role = new UserRole();
+                var dostup = role.chkerRoleContract(user);
+                if (dostup != null && dostup.IndexOf("update") != -1)
                 {
-                    Id = id,
-                    Date_Of_Action = dateTimePicker1.Value.ToString(),
-                    Date_Of_Conclusion = dateTimePicker2.Value.ToString(),
-                    Number = long.Parse(textBox2.Text),
-                    OrganizationId = organisationId.Id
+                    int id = int.Parse(label2.Text);
+                    Models.Organization organisationId = (Models.Organization)OrganizationName.SelectedItem;
+                    Models.Municipal_contract contract_edit = new Models.Municipal_contract
+                    {
+                        Id = id,
+                        Date_Of_Action = dateTimePicker1.Value.ToString(),
+                        Date_Of_Conclusion = dateTimePicker2.Value.ToString(),
+                        Number = long.Parse(textBox2.Text),
+                        OrganizationId = organisationId.Id
 
-                };
-                MunicipalHandler aplicationHandler = new MunicipalHandler();
-                aplicationHandler.EditContract(contract_edit);
-                MessageBox.Show("Запись отредактирована!");
-            }
+                    };
+                    MunicipalHandler aplicationHandler = new MunicipalHandler();
+                    aplicationHandler.EditContract(contract_edit);
+                    MessageBox.Show("Запись отредактирована!");
+                }
+                else MessageBox.Show("Нет прав");
+            } 
             catch (Exception)
             {
 

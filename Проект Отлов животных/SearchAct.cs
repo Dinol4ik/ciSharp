@@ -16,7 +16,7 @@ namespace Проект_Отлов_животных
 {
     public partial class SearchAct : Form
     {
-        public SearchAct(List<Act> act, List<Models.Organization> organizations, List<Models.Municipal_contract> contract, List<Models.Applications> applications, string roleUser)
+        public SearchAct(List<Models.User> users,List<Act> act, List<Models.Organization> organizations, List<Models.Municipal_contract> contract, List<Models.Applications> applications, string roleUser)
         {
             data = act;
             InitializeComponent();

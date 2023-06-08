@@ -230,6 +230,7 @@
             button3.TabIndex = 33;
             button3.Text = "Изменить";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // SearchApplication
             // 

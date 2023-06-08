@@ -15,7 +15,7 @@ namespace Проект_Отлов_животных
 {
     public partial class SearchOrganisation : Form
     {
-        public SearchOrganisation(List<OrganizationC> org, List<Models.Locality> locality, List<Models.Type_Of_Organization> type, string roleUser)
+        public SearchOrganisation(List<Models.User> users, List<OrganizationC> org, List<Models.Locality> locality, List<Models.Type_Of_Organization> type, string roleUser)
         {
             data = org;
             InitializeComponent();
@@ -38,6 +38,7 @@ namespace Проект_Отлов_животных
             label2.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
         }
         List<OrganizationC> data;
+        List<Models.User> user;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -64,28 +65,35 @@ namespace Проект_Отлов_животных
         {
             try
             {
-                int id = int.Parse(label2.Text);
-
-                Models.Locality localityId = (Models.Locality)comboBox1.SelectedItem;
-                Models.Type_Of_Organization typeOrgId = (Models.Type_Of_Organization)comboBox2.SelectedItem;
-                Models.Organization organization = new Models.Organization
+                UserRole role = new UserRole();
+                var dostup = role.chkerRoleOrg(user);
+                if (dostup != null && dostup.IndexOf("save") != -1)
                 {
-                    Id = int.Parse(label2.Text),
-                    Title = textBox2.Text,
-                    TypeOfId = typeOrgId.Id,
-                    INN = textBox3.Text,
-                    KPP = textBox4.Text,
-                    Sole_Properietor = textBox5.Text,
-                    Registation_addres = textBox6.Text,
-                    LocalityId = localityId.Id,
-                };
-                //if (data.Find(x => x.Id == id) != null) { data.Remove(data.Find(x => x.Id == id)); }
-                RegisterOrganization organizationHandler = new RegisterOrganization();
-                organizationHandler.EditOrganization(organization);
+                    int id = int.Parse(label2.Text);
 
-                dataGridView1.DataSource = data.GetRange(0, data.Count);
-                dataGridView1.Refresh();
-                MessageBox.Show("Данные обновленны");
+                    Models.Locality localityId = (Models.Locality)comboBox1.SelectedItem;
+                    Models.Type_Of_Organization typeOrgId = (Models.Type_Of_Organization)comboBox2.SelectedItem;
+                    Models.Organization organization = new Models.Organization
+                    {
+                        Id = int.Parse(label2.Text),
+                        Title = textBox2.Text,
+                        TypeOfId = typeOrgId.Id,
+                        INN = textBox3.Text,
+                        KPP = textBox4.Text,
+                        Sole_Properietor = textBox5.Text,
+                        Registation_addres = textBox6.Text,
+                        LocalityId = localityId.Id,
+                    };
+                    //if (data.Find(x => x.Id == id) != null) { data.Remove(data.Find(x => x.Id == id)); }
+                    RegisterOrganization organizationHandler = new RegisterOrganization();
+                    organizationHandler.EditOrganization(organization);
+
+                    dataGridView1.DataSource = data.GetRange(0, data.Count);
+                    dataGridView1.Refresh();
+                    MessageBox.Show("Данные обновленны");
+                }
+                else MessageBox.Show("У вас нет прав");
+                   
             }
             catch
             {
