@@ -15,10 +15,22 @@ namespace Проект_Отлов_животных
 {
     public partial class SearchApplication : Form
     {
-        public SearchApplication(List<Application> application, List<Models.Locality> localitiy)
+        public SearchApplication(List<Application> application, List<Models.Locality> localitiy, string roleUser)
         {
             data = application;
             InitializeComponent();
+            if (roleUser == "Куратор ВетСлужбы"
+                || roleUser == "Подписант ВетСлужбы"
+                || roleUser == "Куратор ОМСУ"
+                || roleUser == "Подписант ОМСУ"
+                || roleUser == "Подписант по отлову"
+                || roleUser == "Куратор по отлову")
+            {
+                button2.Visible = false;
+                button3.Visible = false;
+
+            }
+
             localityAdress.DataSource = localitiy;
             localityAdress.DisplayMember = "Adress";
             localityAdress.ValueMember = "Id";
@@ -30,23 +42,6 @@ namespace Проект_Отлов_животных
         private void button1_Click(object sender, EventArgs e)
         {
             string application = textBox1.Text;
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            label2.Text = dataGridView1[0, dataGridView1.CurrentRow.Index].Value.ToString();
-            var dat = dataGridView1[1, dataGridView1.CurrentRow.Index].Value.ToString();
-            var descr = dataGridView1[3, dataGridView1.CurrentRow.Index].Value.ToString();
-            var habit = dataGridView1[4, dataGridView1.CurrentRow.Index].Value.ToString();
-            bool chek = Convert.ToBoolean(dataGridView1[5, dataGridView1.CurrentRow.Index].Value);
-            var number = dataGridView1[7, dataGridView1.CurrentRow.Index].Value.ToString();
-            dateTimePicker1.Value = Convert.ToDateTime(dat);
-            textBox4.Text = descr;
-            textBox3.Text = habit;
-            textBox2.Text = number;
-            checkBox1.Checked = chek;
-
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -109,6 +104,21 @@ namespace Проект_Отлов_животных
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            label2.Text = dataGridView1[0, dataGridView1.CurrentRow.Index].Value.ToString();
+            var dat = dataGridView1[1, dataGridView1.CurrentRow.Index].Value.ToString();
+            var descr = dataGridView1[3, dataGridView1.CurrentRow.Index].Value.ToString();
+            var habit = dataGridView1[4, dataGridView1.CurrentRow.Index].Value.ToString();
+            bool chek = Convert.ToBoolean(dataGridView1[5, dataGridView1.CurrentRow.Index].Value);
+            var number = dataGridView1[7, dataGridView1.CurrentRow.Index].Value.ToString();
+            dateTimePicker1.Value = Convert.ToDateTime(dat);
+            textBox4.Text = descr;
+            textBox3.Text = habit;
+            textBox2.Text = number;
+            checkBox1.Checked = chek;
         }
     }
 }

@@ -15,15 +15,41 @@ namespace Проект_Отлов_животных
 {
     public partial class mainForm : Form
     {
-        //List<Models.User> data
-        public mainForm()
+
+        public mainForm(List<Models.User> data)
         {
             InitializeComponent();
-            //accountName.Text = data[0].Login;
-            //this.data = data;
+            accountName.Text = data[0].Role;
+            roleUser = data[0].Role;
+            this.data = data;
             StartPosition = FormStartPosition.CenterParent;
+            //////// role power strength
+            if (roleUser == "Оператор ОМСУ")
+            {
+                ActBtn.Visible = false;
+
+            }
+            else if (roleUser == "Куратор ВетСлужбы"
+                || roleUser == "Подписант ВетСлужбы"
+                || roleUser == "Куратор ОМСУ"
+                || roleUser == "Подписант ОМСУ"
+                || roleUser == "Подписант по отлову"
+                )
+            {
+                ActBtn.Visible = false;
+                AddContractBut.Visible = false;
+                AplicationRegBtn.Visible = false;
+            }
+            else if (roleUser == "Куратор по отлову")
+            {
+                OrgAddBtn.Visible = false;
+                AplicationRegBtn.Visible = false;
+                AddContractBut.Visible = false;
+
+            }
         }
-        //List<Models.User> data;
+        string roleUser;
+        List<Models.User> data;
 
         private void mainForm_Load(object sender, EventArgs e)
         {
@@ -45,31 +71,6 @@ namespace Проект_Отлов_животных
 
         }
 
-
-        private void OrgAddBtn_Click(object sender, EventArgs e)
-        {
-            Organisation org = new Organisation();
-            org.ShowDialog();
-        }
-
-        private void AplicationRegBtn_Click(object sender, EventArgs e)
-        {
-            AplicationHandler allLocality = new AplicationHandler();
-            var locality = allLocality.localities();
-            RegisterApplicationForm frap = new RegisterApplicationForm(locality);
-            frap.ShowDialog();
-        }
-
-        private void SearchApplicationBut_Click(object sender, EventArgs e)
-        {
-            AplicationHandler aplication = new AplicationHandler();
-            var aplicationList = aplication.GetApplicationList();
-            AplicationHandler allLocality = new AplicationHandler();
-            var locality = allLocality.localities();
-            SearchApplication application = new SearchApplication(aplicationList, locality);
-            application.ShowDialog();
-        }
-
         private void AccountBtn_Click_1(object sender, EventArgs e)
         {
             //AccountForm frm = new AccountForm(data);
@@ -81,6 +82,68 @@ namespace Проект_Отлов_животных
 
         }
 
+        private void OrgSearchBut_Click(object sender, EventArgs e)
+        {
+            RegisterOrganization organizationHandler = new RegisterOrganization();
+            var organizations = organizationHandler.GetOrganizationList();
+            var type_org = organizationHandler.type_organisation();
+
+            AplicationHandler allLocality = new AplicationHandler();
+            var locality = allLocality.localities();
+
+            SearchOrganisation org = new SearchOrganisation(organizations, locality, type_org, roleUser);
+            org.ShowDialog();
+        }
+
+        private void SearchActBut_Click(object sender, EventArgs e)
+        {
+            RegisterAct act = new RegisterAct();
+            var actList = act.GetActList();
+
+            var organisation = act.organisation();
+            var contract = act.municipal_contract();
+            var application = act.GetApplication();
+
+            SearchAct actForm = new SearchAct(actList, organisation, contract, application, roleUser);
+            actForm.ShowDialog();
+        }
+
+        private void SearchContractBut_Click(object sender, EventArgs e)
+        {
+            MunicipalHandler contract = new MunicipalHandler();
+            var org = contract.OrganizationsName();
+            var contracts = contract.GetContractsList();
+            SearchContract Form = new SearchContract(contracts, org, roleUser);
+            Form.ShowDialog();
+        }
+
+        private void AddContractBut_Click(object sender, EventArgs e)
+        {
+            MunicipalHandler contract = new MunicipalHandler();
+            var org = contract.OrganizationsName();
+            Contract Form = new Contract(org, roleUser);
+            Form.ShowDialog();
+        }
+
+        private void OrgAddBtn_Click(object sender, EventArgs e)
+        {
+            RegisterOrganization orgList = new RegisterOrganization();
+            var organisation_type = orgList.type_organisation();
+
+            AplicationHandler allLocality = new AplicationHandler();
+            var locality = allLocality.localities();
+
+            Organisation org = new Organisation(organisation_type, locality);
+            org.ShowDialog();
+        }
+
+        private void AplicationRegBtn_Click(object sender, EventArgs e)
+        {
+            AplicationHandler allLocality = new AplicationHandler();
+            var locality = allLocality.localities();
+            RegisterApplicationForm frap = new RegisterApplicationForm(locality, roleUser);
+            frap.ShowDialog();
+        }
 
         private void ActBtn_Click(object sender, EventArgs e)
         {
@@ -94,47 +157,16 @@ namespace Проект_Отлов_животных
             AddActForm actForm = new AddActForm(organisation, contract, application);
             actForm.ShowDialog();
         }
-        private void OrgSearchBut_Click(object sender, EventArgs e)
-        {
-            RegisterOrganization organizationHandler = new RegisterOrganization();
-            var organizations = organizationHandler.GetOrganizationList();
-            var type_org = organizationHandler.type_organisation();
 
+        private void SearchApplicationBut_Click(object sender, EventArgs e)
+        {
+            AplicationHandler aplication = new AplicationHandler();
+            var aplicationList = aplication.GetApplicationList();
             AplicationHandler allLocality = new AplicationHandler();
             var locality = allLocality.localities();
-
-            SearchOrganisation org = new SearchOrganisation(organizations, locality, type_org);
-            org.ShowDialog();
+            SearchApplication application = new SearchApplication(aplicationList, locality, roleUser);
+            application.ShowDialog();
         }
 
-        private void SearchActBut_Click(object sender, EventArgs e)
-        {
-            RegisterAct act = new RegisterAct();
-            var actList = act.GetActList();
-
-            var organisation = act.organisation();
-            var contract = act.municipal_contract();
-            var application = act.GetApplication();
-
-            SearchAct actForm = new SearchAct(actList, organisation, contract, application);
-            actForm.ShowDialog();
-        }
-
-        private void SearchContractBut_Click(object sender, EventArgs e)
-        {
-            MunicipalHandler contract = new MunicipalHandler();
-            var org = contract.OrganizationsName();
-            var contracts = contract.GetContractsList();
-            SearchContract Form = new SearchContract(contracts, org);
-            Form.ShowDialog();
-        }
-
-        private void AddContractBut_Click(object sender, EventArgs e)
-        {
-            MunicipalHandler contract = new MunicipalHandler();
-            var org = contract.OrganizationsName();
-            Contract Form = new Contract(org);
-            Form.ShowDialog();
-        }
     }
 }

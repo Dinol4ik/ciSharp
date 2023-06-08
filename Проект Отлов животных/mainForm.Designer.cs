@@ -70,6 +70,7 @@
             ActBtn.TabIndex = 3;
             ActBtn.Text = "Добавление акта";
             ActBtn.UseVisualStyleBackColor = true;
+            ActBtn.Click += ActBtn_Click;
             // 
             // AplicationRegBtn
             // 
@@ -79,6 +80,7 @@
             AplicationRegBtn.TabIndex = 4;
             AplicationRegBtn.Text = "Регистрация заявки";
             AplicationRegBtn.UseVisualStyleBackColor = true;
+            AplicationRegBtn.Click += AplicationRegBtn_Click;
             // 
             // AddContractBut
             // 
@@ -107,6 +109,7 @@
             OrgAddBtn.TabIndex = 7;
             OrgAddBtn.Text = "Добавление Орг";
             OrgAddBtn.UseVisualStyleBackColor = true;
+            OrgAddBtn.Click += OrgAddBtn_Click;
             // 
             // label2
             // 
@@ -153,6 +156,7 @@
             SearchApplicationBut.TabIndex = 12;
             SearchApplicationBut.Text = "Список заявок";
             SearchApplicationBut.UseVisualStyleBackColor = true;
+            SearchApplicationBut.Click += SearchApplicationBut_Click;
             // 
             // SearchActBut
             // 

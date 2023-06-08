@@ -15,11 +15,21 @@ namespace Проект_Отлов_животных
 {
     public partial class SearchContract : Form
     {
-        public SearchContract(List<Municipal_ContractC> contracts, List<Models.Organization> organizations)
+        public SearchContract(List<Municipal_ContractC> contracts, List<Models.Organization> organizations, string roleUser)
         {
             data = contracts;
 
             InitializeComponent();
+            if (roleUser == "Куратор ВетСлужбы"
+                || roleUser == "Подписант ВетСлужбы"
+                || roleUser == "Куратор ОМСУ"
+                || roleUser == "Подписант ОМСУ"
+                || roleUser == "Подписант по отлову")
+            {
+                button2.Visible = false;
+                button3.Visible = false;
+
+            }
             OrganizationName.DataSource = organizations;
             OrganizationName.DisplayMember = "title";
             OrganizationName.ValueMember = "Id";

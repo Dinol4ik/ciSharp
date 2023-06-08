@@ -9,14 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace Проект_Отлов_животных
 {
     public partial class Contract : Form
     {
-        public Contract(List<Models.Organization> organizations)
+        public Contract(List<Models.Organization> organizations, string roleUser)
         {
             InitializeComponent();
+            if (roleUser == "Оператор ОМСУ")
+            {
+                button2.Visible = false;
+                button3.Visible = false;
+
+            }
             OrganizationName.DataSource = organizations;
             OrganizationName.DisplayMember = "title";
             OrganizationName.ValueMember = "Id";

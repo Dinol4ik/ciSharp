@@ -13,7 +13,7 @@ namespace Проект_Отлов_животных
 {
     public partial class RegisterApplicationForm : Form
     {
-        public RegisterApplicationForm(List<Models.Locality> data)
+        public RegisterApplicationForm(List<Models.Locality> data,string roleUser)
         {
 
             

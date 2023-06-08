@@ -16,13 +16,23 @@ namespace Проект_Отлов_животных
 {
     public partial class SearchAct : Form
     {
-        public SearchAct(List<Act> act, List<Models.Organization> organizations, List<Models.Municipal_contract> contract, List<Models.Applications> applications)
+        public SearchAct(List<Act> act, List<Models.Organization> organizations, List<Models.Municipal_contract> contract, List<Models.Applications> applications, string roleUser)
         {
             data = act;
             InitializeComponent();
             comboBox3.DataSource = applications;
             comboBox3.DisplayMember = "number";
             comboBox3.ValueMember = "Id";
+            if (roleUser == "Куратор ВетСлужбы"
+                || roleUser == "Подписант ВетСлужбы"
+                || roleUser == "Куратор ОМСУ"
+                || roleUser == "Подписант ОМСУ"
+                || roleUser == "Подписант по отлову"|| roleUser == "Куратор по отлову")
+            {
+                button2.Visible = false;
+                button3.Visible = false;
+
+            }
 
             comboBox1.DataSource = organizations;
             comboBox1.DisplayMember = "Title";

@@ -87,6 +87,7 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(554, 241);
             dataGridView1.TabIndex = 3;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // label2
             // 

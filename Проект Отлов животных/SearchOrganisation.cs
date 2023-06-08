@@ -15,7 +15,7 @@ namespace Проект_Отлов_животных
 {
     public partial class SearchOrganisation : Form
     {
-        public SearchOrganisation(List<OrganizationC> org, List<Models.Locality> locality, List<Models.Type_Of_Organization> type)
+        public SearchOrganisation(List<OrganizationC> org, List<Models.Locality> locality, List<Models.Type_Of_Organization> type, string roleUser)
         {
             data = org;
             InitializeComponent();
@@ -23,6 +23,12 @@ namespace Проект_Отлов_животных
             comboBox1.DataSource = locality;
             comboBox1.DisplayMember = "Adress";
             comboBox1.ValueMember = "Id";
+            if (roleUser == "Куратор по отлову")
+            {
+                button2.Visible = false;
+                button3.Visible = false;
+
+            }
 
             comboBox2.DataSource = type;
             comboBox2.DisplayMember = "Title";
