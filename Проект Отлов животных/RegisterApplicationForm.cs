@@ -16,7 +16,7 @@ namespace Проект_Отлов_животных
         public RegisterApplicationForm(List<Models.User> users, List<Models.Locality> data,string roleUser)
         {
 
-            
+            user = users;
             InitializeComponent();
             listBox1.SelectedIndex = 0;
             //foreach (Models.Locality locality in data)
@@ -27,6 +27,7 @@ namespace Проект_Отлов_животных
             localityAdress.DisplayMember = "Adress";
             localityAdress.ValueMember = "Id";
         }
+        List<Models.User> user;
         private void label1_Click(object sender, EventArgs e)
         {
 

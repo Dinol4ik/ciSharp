@@ -158,3 +158,4 @@ C:\Users\Andrey\source\repos\Dinol4ik\ciSharp\Проект Отлов живот
 C:\Users\Andrey\source\repos\Dinol4ik\ciSharp\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.SearchContract.resources
 C:\Users\Andrey\source\repos\Dinol4ik\ciSharp\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.SearchOrganisation.resources
 C:\Users\Andrey\source\repos\Dinol4ik\ciSharp\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.AnimalCard.resources
+C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.AnimalCard.resources
