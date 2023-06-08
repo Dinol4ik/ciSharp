@@ -16,7 +16,7 @@ namespace Проект_Отлов_животных
 {
     public partial class Organisation : Form
     {
-        public Organisation(List<Models.Type_Of_Organization> type, List<Models.Locality> locality)
+        public Organisation(List<Models.User> users,List<Models.Type_Of_Organization> type, List<Models.Locality> locality)
         {
             InitializeComponent();
             comboBox1.DataSource = type;

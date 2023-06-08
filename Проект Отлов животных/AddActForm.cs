@@ -13,7 +13,7 @@ namespace Проект_Отлов_животных
 {
     public partial class AddActForm : Form
     {
-        public AddActForm(List<Models.Organization> organizations, List<Models.Municipal_contract> contract, List<Models.Applications> applications)
+        public AddActForm(List<Models.User> users, List<Models.Organization> organizations, List<Models.Municipal_contract> contract, List<Models.Applications> applications)
         {
             InitializeComponent();
             comboBox3.DataSource = applications;

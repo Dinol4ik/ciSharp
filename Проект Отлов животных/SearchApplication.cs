@@ -15,9 +15,10 @@ namespace Проект_Отлов_животных
 {
     public partial class SearchApplication : Form
     {
-        public SearchApplication(List<Application> application, List<Models.Locality> localitiy, string roleUser)
+        public SearchApplication(List<Models.User> users, List<Application> application, List<Models.Locality> localitiy, string roleUser)
         {
             data = application;
+            user = users;
             InitializeComponent();
             if (roleUser == "Куратор ВетСлужбы"
                 || roleUser == "Подписант ВетСлужбы"
@@ -34,10 +35,12 @@ namespace Проект_Отлов_животных
             localityAdress.DataSource = localitiy;
             localityAdress.DisplayMember = "Adress";
             localityAdress.ValueMember = "Id";
+            listBox1.SelectedIndex = 0;
             dataGridView1.DataSource = data.GetRange(0, data.Count);
             label2.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
         }
         List<Application> data;
+        List<Models.User> user;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -75,30 +78,40 @@ namespace Проект_Отлов_животных
 
         private void button3_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Models.Locality localityID = (Models.Locality)localityAdress.SelectedItem;
-                Models.Applications applications = new Models.Applications
+           
+                UserRole role = new UserRole();
+                var dostup = role.chkerRoleAplication(user);
+                if (dostup != null && dostup.IndexOf("save") != -1)
                 {
-                    Id = int.Parse(label2.Text),
-                    Date = dateTimePicker1.Value.ToString(),
-                    Description = textBox4.Text,
-                    Kategory = listBox1.SelectedItem.ToString(),
-                    //Locality = localityID,
-                    AnimalHabitat = textBox3.Text,
-                    LocalityId = localityID.Id,
-                    number = int.Parse(textBox2.Text),
-                    UrgencyOfExecution = Convert.ToBoolean(checkBox1.Checked)
-                };
-                AplicationHandler aplicationHandler = new AplicationHandler();
-                aplicationHandler.EditAplication(applications);
-                MessageBox.Show("Запись успешно изменена!");
-            }
-            catch (Exception)
-            {
+                    try
+                    {
+                    var kat = listBox1.SelectedItem.ToString();
+                    Models.Locality localityID = (Models.Locality)localityAdress.SelectedItem;
+                    Models.Applications applications = new Models.Applications
+                    {
+                        Id = int.Parse(label2.Text),
+                        Date = dateTimePicker1.Value.ToString(),
+                        Description = textBox4.Text,
+                        Kategory = kat,
+                        //Locality = localityID,
+                        AnimalHabitat = textBox3.Text,
+                        LocalityId = localityID.Id,
+                        number = int.Parse(textBox2.Text),
+                        UrgencyOfExecution = Convert.ToBoolean(checkBox1.Checked)
+                    };
+                    AplicationHandler aplicationHandler = new AplicationHandler();
+                    aplicationHandler.EditAplication(applications);
+                    MessageBox.Show("Запись успешно изменена!");
+                }
+                catch 
+                {
 
-                MessageBox.Show("Произошла ошибка проверьте правильность данных!");
-            }
+                    MessageBox.Show("Произошла ошибка проверьте правильность данных!");
+                }
+                
+                }
+                else MessageBox.Show("У вас нет прав!");
+            
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -120,5 +133,6 @@ namespace Проект_Отлов_животных
             textBox2.Text = number;
             checkBox1.Checked = chek;
         }
+
     }
 }
