@@ -15,6 +15,7 @@ namespace Проект_Отлов_животных
     {
         public AddActForm(List<Models.User> users, List<Models.Organization> organizations, List<Models.Municipal_contract> contract, List<Models.Applications> applications)
         {
+            user = users;
             InitializeComponent();
             comboBox3.DataSource = applications;
             comboBox3.DisplayMember = "number";
@@ -28,7 +29,7 @@ namespace Проект_Отлов_животных
             comboBox2.DisplayMember = "Number";
             comboBox2.ValueMember = "Id";
         }
-
+        List<Models.User> user;
         private void AddActBut_Click(object sender, EventArgs e)
         {
             try

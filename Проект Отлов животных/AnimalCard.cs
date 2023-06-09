@@ -13,10 +13,10 @@ namespace Проект_Отлов_животных
 {
     public partial class AnimalCard : Form
     {
-        public AnimalCard(List<Models.Applications> apl, List<Models.Locality> loc)
+        public AnimalCard(List<Models.User> users, List<Models.Applications> apl, List<Models.Locality> loc)
         {
             InitializeComponent();
-
+            user = users;
             comboBox1.DataSource = apl;
             comboBox1.DisplayMember = "number";
             comboBox1.ValueMember = "Id";
@@ -25,7 +25,7 @@ namespace Проект_Отлов_животных
             comboBox2.DisplayMember = "Adress";
             comboBox2.ValueMember = "Id";
         }
-
+        List<Models.User> user;
         private void AnimalCard_Load(object sender, EventArgs e)
         {
            

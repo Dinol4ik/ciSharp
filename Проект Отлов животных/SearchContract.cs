@@ -97,7 +97,7 @@ namespace Проект_Отлов_животных
 
             try
             {
-                int id = int.Parse(label2.Text);
+                    int id = int.Parse(label2.Text);
 
                 if (data.Find(x => x.Id == id) != null) { data.Remove(data.Find(x => x.Id == id)); }
                 MunicipalHandler aplicationHandler = new MunicipalHandler();

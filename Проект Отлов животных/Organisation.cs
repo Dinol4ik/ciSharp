@@ -18,6 +18,7 @@ namespace Проект_Отлов_животных
     {
         public Organisation(List<Models.User> users,List<Models.Type_Of_Organization> type, List<Models.Locality> locality)
         {
+            user = users;
             InitializeComponent();
             comboBox1.DataSource = type;
             comboBox1.DisplayMember = "Title";
@@ -27,6 +28,7 @@ namespace Проект_Отлов_животных
             comboBox2.DisplayMember = "Adress";
             comboBox2.ValueMember = "Id";
         }
+        List<Models.User> user;
 
         private void AddOrgButton_Click(object sender, EventArgs e)
         {

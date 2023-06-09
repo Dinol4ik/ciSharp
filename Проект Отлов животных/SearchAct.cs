@@ -33,7 +33,7 @@ namespace Проект_Отлов_животных
                 button3.Visible = false;
 
             }
-
+            user = users;
             comboBox1.DataSource = organizations;
             comboBox1.DisplayMember = "Title";
             comboBox1.ValueMember = "Id";
@@ -46,6 +46,7 @@ namespace Проект_Отлов_животных
             label2.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
         }
         List<Act> data;
+        List<Models.User> user;
         private void button1_Click(object sender, EventArgs e)
         {
             string title = textBox1.Text;

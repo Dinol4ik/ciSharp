@@ -91,7 +91,7 @@ namespace Проект_Отлов_животных
             AplicationHandler allLocality = new AplicationHandler();
             var locality = allLocality.localities();
 
-            SearchOrganisation org = new SearchOrganisation(data,organizations, locality, type_org, roleUser);
+            SearchOrganisation org = new SearchOrganisation(data, organizations, locality, type_org, roleUser);
             org.ShowDialog();
         }
 
@@ -104,7 +104,7 @@ namespace Проект_Отлов_животных
             var contract = act.municipal_contract();
             var application = act.GetApplication();
 
-            SearchAct actForm = new SearchAct(data,actList, organisation, contract, application, roleUser);
+            SearchAct actForm = new SearchAct(data, actList, organisation, contract, application, roleUser);
             actForm.ShowDialog();
         }
 
@@ -113,7 +113,7 @@ namespace Проект_Отлов_животных
             MunicipalHandler contract = new MunicipalHandler();
             var org = contract.OrganizationsName();
             var contracts = contract.GetContractsList();
-            SearchContract Form = new SearchContract(data,contracts, org, roleUser);
+            SearchContract Form = new SearchContract(data, contracts, org, roleUser);
             Form.ShowDialog();
         }
 
@@ -121,7 +121,7 @@ namespace Проект_Отлов_животных
         {
             MunicipalHandler contract = new MunicipalHandler();
             var org = contract.OrganizationsName();
-            Contract Form = new Contract(org, roleUser);
+            Contract Form = new Contract(data, org, roleUser);
             Form.ShowDialog();
         }
 
@@ -133,7 +133,7 @@ namespace Проект_Отлов_животных
             AplicationHandler allLocality = new AplicationHandler();
             var locality = allLocality.localities();
 
-            Organisation org = new Organisation(data,organisation_type, locality);
+            Organisation org = new Organisation(data, organisation_type, locality);
             org.ShowDialog();
         }
 
@@ -141,7 +141,7 @@ namespace Проект_Отлов_животных
         {
             AplicationHandler allLocality = new AplicationHandler();
             var locality = allLocality.localities();
-            RegisterApplicationForm frap = new RegisterApplicationForm(data,locality, roleUser);
+            RegisterApplicationForm frap = new RegisterApplicationForm(data, locality, roleUser);
             frap.ShowDialog();
         }
 
@@ -154,7 +154,7 @@ namespace Проект_Отлов_животных
             var contract = act.municipal_contract();
             var application = act.GetApplication();
 
-            AddActForm actForm = new AddActForm(data,organisation, contract, application);
+            AddActForm actForm = new AddActForm(data, organisation, contract, application);
             actForm.ShowDialog();
         }
 
@@ -164,7 +164,7 @@ namespace Проект_Отлов_животных
             var aplicationList = aplication.GetApplicationList();
             AplicationHandler allLocality = new AplicationHandler();
             var locality = allLocality.localities();
-            SearchApplication application = new SearchApplication(data,aplicationList, locality, roleUser);
+            SearchApplication application = new SearchApplication(data, aplicationList, locality, roleUser);
             application.ShowDialog();
         }
 
@@ -174,7 +174,7 @@ namespace Проект_Отлов_животных
             var application = apl.aplicatList();
             var locality = apl.localities();
 
-            AnimalCard actForm = new AnimalCard(application, locality);
+            AnimalCard actForm = new AnimalCard(data, application, locality);
             actForm.ShowDialog();
         }
     }

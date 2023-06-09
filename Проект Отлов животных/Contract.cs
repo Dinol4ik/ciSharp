@@ -15,14 +15,15 @@ namespace Проект_Отлов_животных
 {
     public partial class Contract : Form
     {
-        public Contract(List<Models.Organization> organizations, string roleUser)
+        public Contract(List<Models.User> users, List<Models.Organization> organizations, string roleUser)
         {
+            user = users;
             InitializeComponent();
             OrganizationName.DataSource = organizations;
             OrganizationName.DisplayMember = "title";
             OrganizationName.ValueMember = "Id";
         }
-
+        List<Models.User> user;
         private void AddContractBut_Click(object sender, EventArgs e)
         {
             try

@@ -26,7 +26,7 @@ namespace Проект_Отлов_животных
         {
             if (user[0].Role == "Оператор ОМСУ")
             {
-                List<string> s = new List<string> { "save", "edit", "delete", "update" };
+                List<string> s = new List<string> { "save", "read", "delete", "update" };
                 return s;
             }
             return null;
@@ -35,7 +35,7 @@ namespace Проект_Отлов_животных
         {
             if (user[0].Role == "Оператор ОМСУ")
             {
-                List<string> s = new List<string> { "save", "edit", "delete", "update" };
+                List<string> s = new List<string> { "save", "read", "delete", "update" };
                 return s;
             }
             return null;
@@ -44,7 +44,12 @@ namespace Проект_Отлов_животных
         {
             if (user[0].Role == "Оператор ОМСУ")
             {
-                List<string> s = new List<string> { "save", "edit", "delete", "" };
+                List<string> s = new List<string> { "save", "read", "delete", "" };
+                return s;
+            }
+            if (user[0].Role == "Подписант по отлову")
+            {
+                List<string> s = new List<string> { "", "read", "", "update" };
                 return s;
             }
             return null;

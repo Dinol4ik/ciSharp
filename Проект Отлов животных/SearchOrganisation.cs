@@ -19,7 +19,7 @@ namespace Проект_Отлов_животных
         {
             data = org;
             InitializeComponent();
-
+            user = users;
             comboBox1.DataSource = locality;
             comboBox1.DisplayMember = "Adress";
             comboBox1.ValueMember = "Id";
@@ -67,7 +67,7 @@ namespace Проект_Отлов_животных
             {
                 UserRole role = new UserRole();
                 var dostup = role.chkerRoleOrg(user);
-                if (dostup != null && dostup.IndexOf("save") != -1)
+                if (dostup != null && dostup.IndexOf("update") != -1)
                 {
                     int id = int.Parse(label2.Text);
 
@@ -88,12 +88,10 @@ namespace Проект_Отлов_животных
                     RegisterOrganization organizationHandler = new RegisterOrganization();
                     organizationHandler.EditOrganization(organization);
 
-                    dataGridView1.DataSource = data.GetRange(0, data.Count);
-                    dataGridView1.Refresh();
                     MessageBox.Show("Данные обновленны");
                 }
                 else MessageBox.Show("У вас нет прав");
-                   
+
             }
             catch
             {
@@ -118,6 +116,11 @@ namespace Проект_Отлов_животных
             {
                 MessageBox.Show("Ошибка при удалении данных");
             }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

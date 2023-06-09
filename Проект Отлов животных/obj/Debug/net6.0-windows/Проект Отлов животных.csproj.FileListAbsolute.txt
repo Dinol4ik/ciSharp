@@ -38,7 +38,6 @@ C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животн�
 C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.LoginForm.resources
 C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.mainForm.resources
-C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.AccountForm.resources
 C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.RegisterApplicationForm.resources
 C:\Users\Andrey\Source\Repos\Dinol4ik\ciSharp\Проект Отлов животных\obj\Debug\net6.0-windows\Проект Отлов животных.dll
 C:\Users\Andrey\Source\Repos\Dinol4ik\ciSharp\Проект Отлов животных\obj\Debug\net6.0-windows\refint\Проект Отлов животных.dll
@@ -127,10 +126,6 @@ C:\Users\User\source\repos\ciSharp\Проект Отлов животных\obj\
 C:\Users\User\source\repos\ciSharp\Проект Отлов животных\obj\Debug\net6.0-windows\ref\Проект Отлов животных.dll
 C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.AddActForm.resources
 C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.Contract.resources
-C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.EditAct.resources
-C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.EditApplication.resources
-C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.EditContract.resources
-C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.EditOrganisation.resources
 C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.Organisation.resources
 C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.SearchAct.resources
 C:\Users\Никто\source\repos\sharpTeam\Проект Отлов животных\obj\Debug\net6.0-windows\Проект_Отлов_животных.SearchApplication.resources

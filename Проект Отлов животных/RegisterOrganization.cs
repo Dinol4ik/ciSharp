@@ -63,7 +63,7 @@ namespace Проект_Отлов_животных
                     org.Title = updateOrg.Title;
                     org.INN = updateOrg.INN;
                     org.KPP = updateOrg.KPP;
-                    org.TypeOf = updateOrg.TypeOf;
+                    org.TypeOfId = updateOrg.TypeOfId;
                     org.Registation_addres = updateOrg.Registation_addres;
                     org.LocalityId = updateOrg.LocalityId;
                     org.Sole_Properietor = updateOrg.Sole_Properietor;
